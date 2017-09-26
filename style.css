@@ -4,6 +4,9 @@
   box-sizing:border-box;
   background:#eee;
 }
+body {
+ padding-bottom:50px; 
+}
 a {
   width:100%;
   display:block;
