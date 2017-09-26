@@ -8,6 +8,7 @@ a {
   width:100%;
   display:block;
   text-decoration:none !important;
+  border-bottom:1px dotted white;
 }
 .inhalt {
   display:none;
@@ -19,7 +20,6 @@ a {
   padding:5px 20px;
   background:#fbba00;
   color:black;
-  border-bottom:1px dotted white;
 }
 .inhalt a:hover {
   background:black;
