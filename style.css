@@ -2,18 +2,20 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-}
-body {
-  background:red;
+  background:#eee;
 }
 .collapse a {
   width:100%;
   display:block;
   padding:5px 20px;
-  background:lightblue;
+  background:#fbba00;
   color:black;
   text-decoration:none;
-  border-bottom:1p dotted white;
+  border-bottom:1px dotted white;
+}
+.collapse a:hover {
+  background:black;
+  color:#fbba00;
 }
 .link {
   width:100%;
@@ -25,8 +27,7 @@ body {
 }
 .link:hover {
   background:blue;
-  border-top:2px solid white;
-  border-bottom:2px solid white;
+  color:white;
 }
 h1 {
   text-align:center;
