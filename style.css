@@ -20,6 +20,7 @@ a {
   padding:5px 20px;
   background:lightblue;
   color:black;
+  font-size:1.5rem;
 }
 .link:hover {
   background:blue;
