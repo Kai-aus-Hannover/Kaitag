@@ -8,14 +8,12 @@ body {
   background:#eee;
   padding-bottom:45px; 
 }
-a:first-child {
-  border-top:1px dashed white;
-}
 a {
   width:100%;
   display:block;
   text-decoration:none !important;
-  border-bottom:1px dashed white;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
   transition:0.2s ease;
 }
 .link {
