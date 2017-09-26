@@ -5,9 +5,9 @@
   background:#eee;
 }
 a {
-  width:100%;
-  display:block;
-  text-decoration:none;
+  width:100% !important;
+  display:block !important;
+  text-decoration:none !important;
 }
 .collapse a {
   padding:5px 20px;
