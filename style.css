@@ -25,17 +25,20 @@ a {
   background:blue;
   color:white;
 }
+.collapse,
 .inhalt {
   display:none;
 }
 .inhalt:target {
   display:block;
 }
+.collapse a,
 .inhalt a {
   padding:5px 30px;
   background:#fbba00;
   color:black;
 }
+.collapse a:hover,
 .inhalt a:hover {
   background:black;
   color:#fbba00;
