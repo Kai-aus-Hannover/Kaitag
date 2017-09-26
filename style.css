@@ -8,6 +8,9 @@ body {
   background:#eee;
   padding-bottom:45px; 
 }
+a:first-child {
+  border-top:1px dashed white;
+}
 a {
   width:100%;
   display:block;
