@@ -23,7 +23,7 @@ a {
 }
 .link:hover {
   background:blue;
-  color:#eee;
+  color:black;
 }
 .inhalt {
   display:none;
@@ -34,7 +34,7 @@ a {
 .inhalt a {
   padding:5px 30px;
   background:#fbba00;
-  color:#606060;
+  color:black;
 }
 .inhalt a:hover {
   background:#606060;
