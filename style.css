@@ -14,21 +14,6 @@ a {
   border-bottom:1px dotted white;
   transition:0.2s ease;
 }
-.inhalt {
-  display:none;
-}
-.inhalt:target {
-  display:block;
-}
-.inhalt a {
-  padding:5px 20px;
-  background:#fbba00;
-  color:black;
-}
-.inhalt a:hover {
-  background:black;
-  color:#fbba00;
-}
 .link {
   padding:5px 20px;
   background:lightblue;
@@ -37,6 +22,21 @@ a {
 .link:hover {
   background:blue;
   color:white;
+}
+.inhalt {
+  display:none;
+}
+.inhalt:target {
+  display:block;
+}
+.inhalt a {
+  padding:5px 30px;
+  background:#fbba00;
+  color:black;
+}
+.inhalt a:hover {
+  background:black;
+  color:#fbba00;
 }
 h1 {
   text-align:center;
