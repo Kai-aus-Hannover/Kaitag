@@ -9,6 +9,7 @@ a {
   display:block;
   text-decoration:none !important;
   border-bottom:1px dotted white;
+  transition:0.2s ease;
 }
 .inhalt {
   display:none;
