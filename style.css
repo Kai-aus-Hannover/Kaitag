@@ -19,7 +19,7 @@ a {
 .link {
   padding:5px 20px;
   background:lightblue;
-  color:#606060;
+  color:black;
 }
 .link:hover {
   background:blue;
