@@ -39,12 +39,12 @@ a {
 }
 .inhalt a {
   padding:5px 30px;
-  background:#fbba00;
+  background:gold;
   color:black;
 }
 .inhalt a:hover {
   background:#606060;
-  color:#fbba00;
+  color:gold;
 }
 h1 {
   text-align:center;
