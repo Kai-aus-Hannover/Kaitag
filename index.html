@@ -32,5 +32,10 @@
       <div class="inhalt collapse" id="Kaitag-am-Freitag-64">Fehler 404</div>
       <a class="link" data-toggle="collapse" href="#Kaitag-am-Freitag-63" aria-expanded="false" aria-controls="footwear">Kaitag am Freitag #63</a>
       <div class="inhalt collapse" id="Kaitag-am-Freitag-63">Fehler 404</div>
+      
+{% for page in site.pages %}
+<h3><a title="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
+<p>{{page.excerpt}}</p>
+{% endfor %}    
    </body>
 </html>
