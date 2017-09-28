@@ -1,3 +1,7 @@
+local function sleep(zeit)
+    io.popen(string.format([==[PING localhost -n %s >NUL]==], zeit))
+end
+
 function links(datei, a)
     local output = io.open(string.sub(datei, 1, a - 5) .. "-LINKS.txt", "r")
     if output then
@@ -6,6 +10,12 @@ function links(datei, a)
         end
     end
     local input = io.open(datei, "r")
+    local inputtest
+    while inputtest ~= input:read("*a") do
+        inputtest = input:read("*a")
+        sleep(1)
+        input = io.open(datei, "r")
+    end
     output = io.open(string.sub(datei, 1, a - 5) .. "-LINKS.txt", "w")
     for zeile in input:lines() do
         local nix, anfang, ende, link, beschreibung
