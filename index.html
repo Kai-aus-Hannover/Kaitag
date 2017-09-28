@@ -17,11 +17,20 @@
                 "Kaitag am Freitag #63 18.08.2017",
                 "Kaitag am Freitag #62 11.08.2017",
                 "Kaitag am Freitag #60 21.07.2017",
+                "Kaitag am Freitag #59 14.07.2017",
+                "Kaitag am Freitag #58 07.07.2017",
+                "Kaitag am Freitag #57 30.06.2017",
+                "Kaitag am Freitag #56 23.06.2017",
+                "Kaitag am Freitag #55 16.06.2017",
+                "Kaitag am Freitag #54 09.06.2017",
+                "Kaitag am Freitag #53 02.06.2017",
+                "Kaitag am Freitag #52 26.05.2017",
+                "Kaitag am Freitag #51 19.05.2017",
+                "Kaitag am Freitag #50 12.05.2017",
             ];
             jQuery( document ).ready(function() {
                 for (i = 0, len = download.length; i < len; i++) {
-                    jQuery("body").append('<a class="link" data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a>');
-                    jQuery("body").append('<div class="inhalt collapse" id="' + i + '">Ups Fehler 404</div>');
+                    jQuery("body").append('<a class="link" data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '">Ups Fehler 404</div>');
                     jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
                 }
             });
