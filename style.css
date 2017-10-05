@@ -52,3 +52,9 @@ h1 {
   font-size:3rem;
   margin:0 !important;
 }
+.fehler404 {
+  background:#990000;
+  width:100%;
+  text-align:center;
+  padding:10px;
+}
