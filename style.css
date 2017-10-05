@@ -26,14 +26,6 @@ a {
   background:blue;
   color:#eee;
 }
-.inhalt {
-  //display:none;
-}
-/*
-.inhalt:target {
-  display:block;
-}
-*/
 .inhalt:visited {
   background:yellow;
 }
