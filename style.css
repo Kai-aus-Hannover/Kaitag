@@ -43,6 +43,7 @@ h1 {
   padding:20px;
   font-size:3rem;
   margin:0 !important;
+  cursor:default;
 }
 .fehler404 {
   color:white;
