@@ -95,7 +95,6 @@
                     jQuery("body").append('<a class="link versteckt" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
                     //jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
                     jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"), function() {
-                        alert("#link-" + i + " test");
                         jQuery("#link-" + i).addClass("versteckttesten");
                     });
                     jQuery("#link-" + i).removeClass("versteckt");
