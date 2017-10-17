@@ -95,8 +95,10 @@
                     jQuery("body").append('<a class="link versteckt" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
                     //jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
                     (function(index) {
-                        jQuery("#" + index).load(encodeURIComponent("/Links/" + download[index] + ".txt"), function() {
-                            jQuery("#link-" + index).removeClass("versteckt");
+                        jQuery("#" + index).load(encodeURIComponent("/Links/" + download[index] + ".txt"), function(a, b) {
+                            if (b == "success") {
+                                jQuery("#link-" + index).removeClass("versteckt");
+                            }
                         });
                     })(i);
                 }
