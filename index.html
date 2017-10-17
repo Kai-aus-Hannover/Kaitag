@@ -93,10 +93,9 @@
             jQuery( document ).ready(function() {
                 for (i = 0, len = download.length; i < len; i++) {
                     jQuery("body").append('<a class="link versteckt" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
-                    //jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
                     (function(index) {
-                        jQuery("#" + index).load(encodeURIComponent("/Links/" + download[index] + ".txt"), function(a, b) {
-                            if (b == "success") {
+                        jQuery("#" + index).load(encodeURIComponent("/Links/" + download[index] + ".txt"), function(inhalt, ergebnis) {
+                            if (ergebnis == "success") {
                                 jQuery("#link-" + index).removeClass("versteckt");
                             }
                         });
