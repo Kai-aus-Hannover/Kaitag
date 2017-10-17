@@ -9,14 +9,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var download = [
-                "Kaitag am Freitag #80 15.12.2017",
-                "Kaitag am Freitag #79 08.12.2017",
-                "Kaitag am Freitag #78 01.12.2017",
-                "Kaitag am Freitag #77 24.11.2017",
-                "Kaitag am Freitag #76 17.11.2017",
-                "Kaitag am Freitag #75 10.11.2017",
-                "Kaitag am Freitag #74 03.11.2017",
-                "Kaitag am Freitag #73 27.10.2017",
+                //"Kaitag am Freitag #80 15.12.2017",
+                //"Kaitag am Freitag #79 08.12.2017",
+                //"Kaitag am Freitag #78 01.12.2017",
+                //"Kaitag am Freitag #77 24.11.2017",
+                //"Kaitag am Freitag #76 17.11.2017",
+                //"Kaitag am Freitag #75 10.11.2017",
+                //"Kaitag am Freitag #74 03.11.2017",
+                //"Kaitag am Freitag #73 27.10.2017",
                 //"Kaitag am Freitag #72 20.10.2017",
                 "Kaitag am Freitag #71 13.10.2017",
                 "Kaitag am Freitag #70 06.10.2017",
@@ -93,7 +93,7 @@
             jQuery( document ).ready(function() {
                 for (i = 0, len = download.length; i < len; i++) {
                     jQuery("body").append('<a class="link versteckt" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
-                    //jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"), function() {jQuery("#link-" + i).removeClass("versteckt")});
+                    //jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
                     jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"), function() {jQuery("#link-" + i).removeClass("versteckt")});
                     jQuery("#link-" + i).removeClass("versteckt");
                 }
