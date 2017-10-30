@@ -57,7 +57,7 @@ h1 {
 .versteckt + .inhalt {
   display:none; 
 }
-@media (min-width:400px) {
+@media (max-width:400px) {
   h1 {
     font-size:12vw;
   }
