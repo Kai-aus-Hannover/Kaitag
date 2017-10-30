@@ -53,6 +53,7 @@ h1 {
   text-align:center;
   padding:10px;
 }
-.versteckt.collapsed {
+.versteckt,
+.versteckt + .inhalt {
   display:none; 
 }
