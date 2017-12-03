@@ -10,8 +10,11 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var $ = jQuery;
+            var download;
             function anzeigen(inhalt) {
-                var download = inhalt.data.tree;
+                download = inhalt.data.tree;
+            }
+            function aufbauen() {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
@@ -30,6 +33,7 @@
                     }
                 }
             }
+            setTimeout(aufbauen, 2000);
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
     </head>
