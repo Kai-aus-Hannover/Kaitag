@@ -18,7 +18,7 @@
                         $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
                         (function(i, pfad) {
                             console.log(i + " --- " + pfad);
-                            $("#" + i).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
+                            $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 console.log("jap" + i);
                                 if (ergebnis == "success") {
                                     $("#link-" + i).removeClass("versteckt");
