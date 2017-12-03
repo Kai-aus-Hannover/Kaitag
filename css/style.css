@@ -79,7 +79,6 @@ h1 {
 .youtube {
   right:0;
   width:160px;
-  margin-top:-48px;
   background:red;
   color:white;
 }
@@ -115,6 +114,12 @@ h1 {
     font-size:12vw;
   }
   .link {
+    font-size:6vw;
+  }
+  .dailymotion,
+  .youtube {
+    position:static;
+    margin-top:0;
     font-size:6vw;
   }
 }
