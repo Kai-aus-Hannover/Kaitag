@@ -33,6 +33,8 @@
                                     }
                                     $("#link-" + i).removeClass("versteckt");
                                     $(youtube + dailymotion).insertAfter("#link-" + i);
+                                    console.log($("#" + i + " .youtube").attr("href"));
+                                    console.log($("#" + i + " .youtube").attr("href").remove());
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }
