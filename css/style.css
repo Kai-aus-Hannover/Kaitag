@@ -15,6 +15,9 @@ a {
   border-top:2px solid blue;
   transition:0.2s ease;
 }
+.inhalt a {
+  border-top:2px solid #eee;
+}
 .link {
   padding:5px 2%;
   background:lightblue;
