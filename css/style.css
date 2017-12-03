@@ -101,6 +101,7 @@ hr {
   visibility:none;
   height:0;
   width:100%;
+  margin:0 !important;
 }
 @media (max-width:800px) {
   .dailymotion,
