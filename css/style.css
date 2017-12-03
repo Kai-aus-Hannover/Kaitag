@@ -97,21 +97,6 @@ h1 {
   background:#00d2f3;
   color:white;
 }
-hr {
-  visibility:none;
-  height:0;
-  width:100%;
-  margin:0 !important;
-}
-@media (max-width:800px) {
-  .dailymotion,
-  .youtube {
-    width:50%;
-    position:unset;
-    margin-top:0;
-    float:right;
-  }
-}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
@@ -121,6 +106,6 @@ hr {
   }
   .dailymotion,
   .youtube {
-    font-size:6vw;
+    display:none;
   }
 }
