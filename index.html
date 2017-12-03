@@ -31,9 +31,9 @@
                                     if ($("#" + i + " .dailymotion").length) {
                                         dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">YouTube</a>';
                                     }
-                                    console.log(youtube + dailymotion);
+                                    console.log("#link-" + i + " ----- " + youtube + dailymotion + " ende");
                                     $("#link-" + i).removeClass("versteckt");
-                                    $("#link-" + i).insertAfter("#link-" + i + " ----- " + youtube + dailymotion + " ende");
+                                    $(youtube + dailymotion).insertAfter("#link-" + i);
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }
