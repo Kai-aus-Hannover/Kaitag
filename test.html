@@ -34,6 +34,9 @@
                 }
             }
             setTimeout(aufbauen, 2000);
+            $(window).on('load', function() {
+                console.log("jetzt");
+            });
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
     </head>
