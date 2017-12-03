@@ -24,21 +24,17 @@
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
                                     $("#link-" + i).removeClass("versteckt");
-                                    var youtube = $("#" + i + " .youtube").attr("href");
-                                    var dailymotion = $("#" + i + " .dailymotion").attr("href");
-                                    $("#" + i + " .youtube").remove();
-                                    $("#" + i + " .dailymotion").remove();
-                                    if (youtube) {
-                                        youtube = '<a class="youtube" href="' + youtube + '">YouTube</a>';
-                                    } else {
-                                        youtube = "";
+                                    var youtube = "";
+                                    var dailymotion = "";
+                                    if ($("#" + i + " .youtube").length) {
+                                        youtube = '<a class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>';
                                     }
-                                    if (dailymotion) {
-                                        dailymotion = '<a class="dailymotion" href="' + dailymotion + '">dailymotion</a>';
-                                    } else {
-                                        dailymotion = "";
+                                    if ($("#" + i + " .dailymotion").length) {
+                                        dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">YouTube</a>';
                                     }
                                     $("#link-" + i).insertAfter(youtube + dailymotion);
+                                    $("#" + i + " .youtube").remove();
+                                    $("#" + i + " .dailymotion").remove();
                                 }
                             });
                         })(i, pfad);
