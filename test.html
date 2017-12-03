@@ -23,7 +23,9 @@
                         $("body").append(a);
                         test(a);
                         (function(index, pfad) {
-                            $("#" + index).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
+                            var b = encodeURIComponent("/" + pfad);
+                            console.log(b);
+                            $("#" + index).load(b, function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
                                     $("#link-" + index).removeClass("versteckt");
                                 }
