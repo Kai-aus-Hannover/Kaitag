@@ -9,27 +9,19 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var $ = jQuery;
-            function test(a) {
-                $("body").append(a);   
-            }
             function anzeigen(inhalt) {
                 var download = inhalt.data.tree;
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
                         var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
-                        console.log(pfad);
-                        console.log(name);
-                        var a = '<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>';
-                        console.log(a);
-                        $("body").append(a);
-                        test(a);
-                        (function(index, pfad) {
-                            var b = encodeURIComponent("/" + pfad);
-                            console.log("hier B: " + b);
-                            $("#" + index).load(b, function(inhalt, ergebnis) {
+                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        (function(i, pfad) {
+                            console.log(i + " --- " + pfad);
+                            $("#" + i).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
+                                console.log("jap" + i);
                                 if (ergebnis == "success") {
-                                    $("#link-" + index).removeClass("versteckt");
+                                    $("#link-" + i).removeClass("versteckt");
                                 }
                             });
                         })(i, pfad);
