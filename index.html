@@ -32,6 +32,7 @@
                                     if ($("#" + i + " .dailymotion").length) {
                                         dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">YouTube</a>';
                                     }
+                                    console.log(youtube + dailymotion);
                                     $("#link-" + i).insertAfter(youtube + dailymotion);
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
