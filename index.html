@@ -32,7 +32,7 @@
                                         dailymotion = '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>';
                                     }
                                     $("#link-" + i).removeClass("versteckt");
-                                    $(youtube + dailymotion).insertAfter("#link-" + i);
+                                    $(youtube + dailymotion + "<hr>").insertAfter("#link-" + i);
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }
