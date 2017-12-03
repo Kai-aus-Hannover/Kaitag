@@ -26,6 +26,9 @@ a {
   background:blue;
   color:#eee;
 }
+.inhalt {
+  position:relative;
+}
 .inhalt:visited {
   background:yellow;
 }
