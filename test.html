@@ -20,7 +20,7 @@
                         (function(i, pfad) {
                             console.log(i + " --- " + pfad);
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
-                                console.log("jap" + i);
+                                console.log("jap " + i);
                                 if (ergebnis == "success") {
                                     $("#link-" + i).removeClass("versteckt");
                                 }
