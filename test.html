@@ -19,7 +19,7 @@
                     console.log(download[i].path)
                     console.log(download[i].path.split('.').slice(0,-1).join())
                     if (download[i].path.substring(0, 6) == anfang) {
-                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
                         (function(index) {
                             $("#" + index).load(encodeURIComponent("/" + download[index].path), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
