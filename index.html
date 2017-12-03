@@ -23,7 +23,6 @@
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
-                                    $("#link-" + i).removeClass("versteckt");
                                     var youtube = "";
                                     var dailymotion = "";
                                     if ($("#" + i + " .youtube").length) {
@@ -33,7 +32,8 @@
                                         dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">YouTube</a>';
                                     }
                                     console.log(youtube + dailymotion);
-                                    $("#link-" + i).insertAfter(youtube + dailymotion);
+                                    $("#link-" + i).removeClass("versteckt");
+                                    $("#link-" + i).insertAfter("#link-" + i + " ----- " + youtube + dailymotion + " ende");
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }
