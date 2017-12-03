@@ -98,15 +98,12 @@ h1 {
   color:white;
 }
 @media (max-width:800px) {
-  .link {
-    height:96px;
-  }
+  .dailymotion,
   .youtube {
     width:50%;
-  }
-  .dailymotion {
-    width:50%;
-    left:0;
+    position:unset;
+    margin-top:0;
+    font-size:6vw;
   }
 }
 @media (max-width:400px) {
@@ -118,8 +115,6 @@ h1 {
   }
   .dailymotion,
   .youtube {
-    position:static;
-    margin-top:0;
     font-size:6vw;
   }
 }
