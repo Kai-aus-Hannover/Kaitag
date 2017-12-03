@@ -81,12 +81,12 @@ h1 {
   color:white;
 }
 .youtube:hover {
-  background:white;
-  color:red;
+  background:#a00;
 }
 .dailymotion {
   right:160px;
-  width:160px;
+  width:200px;
+  font-weight:bold;
   background:white;
   color:#00d2f3;
 }
