@@ -8,7 +8,6 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            var $ = jQuery;
             var anfang = "Links/";
             function anzeigen(inhalt) {
                 var download = inhalt.data.tree;
@@ -16,11 +15,11 @@
                     if (download[i].path.substring(0, 6) == anfang && download[i].path.length > 6) {
                         console.log(download[i].path)
                         console.log(download[i].path.split('.').reverse().slice(1).reverse().join('.'))
-                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        jQuery("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
                         (function(index, pfad) {
-                            $("#" + index).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
+                            jQuery("#" + index).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
-                                    $("#link-" + index).removeClass("versteckt");
+                                    jQuery("#link-" + index).removeClass("versteckt");
                                 }
                             });
                         })(i, download[i].path);
