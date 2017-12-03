@@ -29,9 +29,8 @@
                                         youtube = '<a class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>';
                                     }
                                     if ($("#" + i + " .dailymotion").length) {
-                                        dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">YouTube</a>';
+                                        dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>';
                                     }
-                                    console.log("#link-" + i + " ----- " + youtube + dailymotion + " ende");
                                     $("#link-" + i).removeClass("versteckt");
                                     $(youtube + dailymotion).insertAfter("#link-" + i);
                                     $("#" + i + " .youtube").remove();
