@@ -26,10 +26,10 @@
                                     var youtube = "";
                                     var dailymotion = "";
                                     if ($("#" + i + " .youtube").length) {
-                                        youtube = '<a class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>';
+                                        youtube = '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>';
                                     }
                                     if ($("#" + i + " .dailymotion").length) {
-                                        dailymotion = '<a class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>';
+                                        dailymotion = '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>';
                                     }
                                     $("#link-" + i).removeClass("versteckt");
                                     $(youtube + dailymotion).insertAfter("#link-" + i);
