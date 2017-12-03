@@ -12,8 +12,7 @@ a {
   width:100%;
   display:block;
   text-decoration:none !important;
-  border-top:1px solid #eee;
-  border-bottom:1px solid #eee;
+  border-top:2px solid #777;
   transition:0.2s ease;
 }
 .link {
@@ -72,13 +71,15 @@ h1 {
   font-size:1.5rem;
   z-index:10;
   margin-top:-48px;
+  box-sizing:border-box;
 }
 .youtube {
-  right:0;
-  width:160px;
+  right:-10px;
+  width:170px;
   margin-top:-48px;
   background:red;
   color:white;
+  border-left:5px solid red;
 }
 .youtube:hover {
   background:#a00;
