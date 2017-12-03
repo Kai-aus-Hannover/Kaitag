@@ -24,8 +24,21 @@
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
                                     $("#link-" + i).removeClass("versteckt");
-                                    console.log($("#" + i + " .youtube").html());
-                                    console.log($("#" + i + " .dailymotion").html());
+                                    var youtube = $("#" + i + " .youtube").attr("href");
+                                    var dailymotion = $("#" + i + " .dailymotion").attr("href");
+                                    $("#" + i + " .youtube").remove();
+                                    $("#" + i + " .dailymotion").remove();
+                                    if (youtube.length > 10) {
+                                        youtube = '<a class="youtube" href="' + youtube + '">YouTube</a>';
+                                    } else {
+                                        youtube = "";
+                                    }
+                                    if (dailymotion.length > 10) {
+                                        dailymotion = '<a class="dailymotion" href="' + dailymotion + '">dailymotion</a>';
+                                    } else {
+                                        dailymotion = "";
+                                    }
+                                    $("#link-" + i).insertAfter(youtube + dailymotion);
                                 }
                             });
                         })(i, pfad);
