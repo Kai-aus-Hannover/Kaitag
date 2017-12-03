@@ -99,6 +99,18 @@ h1 {
   background:#00d2f3;
   color:white;
 }
+@media (max-width:800px) {
+  .link {
+    height:96px;
+  }
+  .youtube {
+    width:50%;
+  }
+  .dailymotion {
+    width:50%;
+    left:0;
+  }
+}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
