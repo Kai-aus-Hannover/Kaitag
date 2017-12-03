@@ -12,7 +12,7 @@ a {
   width:100%;
   display:block;
   text-decoration:none !important;
-  border-top:2px solid #777;
+  border-top:2px solid blue;
   transition:0.2s ease;
 }
 .link {
