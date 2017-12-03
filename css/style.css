@@ -82,10 +82,13 @@ h1 {
   margin-top:-48px;
   background:red;
   color:white;
+  /*
   border-left:5px solid red;
+  */
 }
 .youtube:hover {
   background:#a00;
+  color:white;
 }
 .dailymotion {
   right:160px;
