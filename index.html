@@ -28,12 +28,12 @@
                                     var dailymotion = $("#" + i + " .dailymotion").attr("href");
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
-                                    if (youtube.length > 10) {
+                                    if (youtube) {
                                         youtube = '<a class="youtube" href="' + youtube + '">YouTube</a>';
                                     } else {
                                         youtube = "";
                                     }
-                                    if (dailymotion.length > 10) {
+                                    if (dailymotion) {
                                         dailymotion = '<a class="dailymotion" href="' + dailymotion + '">dailymotion</a>';
                                     } else {
                                         dailymotion = "";
