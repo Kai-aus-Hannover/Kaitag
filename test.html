@@ -9,11 +9,10 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var $ = jQuery;
-            var anfang = "Links/";
             function anzeigen(inhalt) {
                 var download = inhalt.data.tree;
                 for (var i = download.length - 1; i >= 0; --i) {
-                    if (download[i].path.substring(0, 6) == anfang && download[i].type == "blob") {
+                    if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         console.log(download[i].path)
                         console.log(download[i].path.split('.').reverse().slice(1).reverse().join('.'))
                         $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a>');
