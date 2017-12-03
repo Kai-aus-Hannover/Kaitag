@@ -13,7 +13,7 @@
             function anzeigen(inhalt) {
                 var download = inhalt.data.tree;
                 for (var i = download.length - 1; i >= 0; --i) {
-                    if (download[i].path.substring(0, 6) == anfang && anfang.length > 6) {
+                    if (download[i].path.substring(0, 6) == anfang) {
                         console.log(download[i].path)
                         console.log(download[i].path.split('.').reverse().slice(1).reverse().join('.'))
                         $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
