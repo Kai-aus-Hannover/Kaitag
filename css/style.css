@@ -77,12 +77,11 @@ h1 {
   box-sizing:border-box;
 }
 .youtube {
-  right:-10px;
-  width:170px;
+  right:0;
+  width:160px;
   margin-top:-48px;
   background:red;
   color:white;
-  border-left:5px solid red;
 }
 .youtube:hover {
   background:white;
