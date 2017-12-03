@@ -57,6 +57,11 @@ h1 {
 .versteckt + .inhalt {
   display:none; 
 }
+.collapse:not(.show) {
+  display:block;
+  height:0;
+  overflow:hidden;
+}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
