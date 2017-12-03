@@ -9,16 +9,19 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var $ = jQuery;
+            function test(a) {
+                $("body").append(a);   
+            }
             function anzeigen(inhalt) {
                 var download = inhalt.data.tree;
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         console.log(download[i].path)
                         console.log(download[i].path.split('.').reverse().slice(1).reverse().join('.'))
-                        var a = '<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a>';
+                        var a = '<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + download[i].path.split('.').reverse().slice(1).reverse().join('.') + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>';
                         console.log(a);
                         $("body").append(a);
-                        $("body").append('<div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        test(a);
                         (function(index, pfad) {
                             $("#" + index).load(encodeURIComponent("/" + pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
