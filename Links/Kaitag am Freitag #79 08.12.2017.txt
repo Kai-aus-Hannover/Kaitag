@@ -1,4 +1,4 @@
-﻿<a class="youtube" href="https://www.youtube.com/watch?v=x4cIrfIiUuE"></a>
+<a class="youtube" href="https://www.youtube.com/watch?v=x4cIrfIiUuE"></a>
 <a href="https://de.sputniknews.com/politik/20171203318535092-usa-fluechtlingsvereinbarung-uno-migrationspakt/">Washington zieht sich aus UN-Flüchtlingsvereinbarung zurück - Sputnik Deutschland</a>
 <a href="https://www.tagesschau.de/ausland/trump-jerusalem-111.html">US-Entscheidung: Trump erkennt Jerusalem als Hauptstadt Israels an | tagesschau.de</a>
 <a href="https://www.stuttgarter-zeitung.de/inhalt.jerusalem-als-israels-hauptstadt-merkel-lehnt-anerkennung-durch-usa-ab.13a9fbfe-2639-4996-8e67-b64bb60cdde1.html">Jerusalem als Israels Hauptstadt: Merkel lehnt Anerkennung durch USA ab - Politik - Stuttgarter Zeitung</a>
