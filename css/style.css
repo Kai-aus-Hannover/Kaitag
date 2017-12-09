@@ -109,11 +109,9 @@ h1 {
   h1 {
     font-size:12vw;
   }
-  .link {
-    font-size:6vw;
-  }
+  .link,
   .dailymotion,
   .youtube {
-    font-size:12vw;
+    font-size:6vw;
   }
 }
