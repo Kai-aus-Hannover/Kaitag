@@ -97,6 +97,14 @@ h1 {
   background:#00d2f3;
   color:white;
 }
+@media (max-width:750px) {
+  .dailymotion,
+  .youtube {
+    margin-top:unset;
+    position:unset;
+    width:100%;
+  }
+}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
@@ -106,6 +114,6 @@ h1 {
   }
   .dailymotion,
   .youtube {
-    display:none;
+    font-size:12vw;
   }
 }
