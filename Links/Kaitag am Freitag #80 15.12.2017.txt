@@ -1,4 +1,5 @@
 ﻿<a class="youtube" href="https://www.youtube.com/watch?v=oEF6_ikaXjM">YouTube</a>
+<a class="dailymotion" href="https://www.dailymotion.com/video/x6bqtse">dailymotion</a>
 <a href="https://www.nzz.ch/international/zehntausende-kinder-wurden-in-kirchlichen-und-staatlichen-institutionen-in-australien-missbraucht-ld.1339694">Zehntausende Kinder wurden in kirchlichen und staatlichen Institutionen in Australien  missbraucht | NZZ</a>
 <a href="https://www.zdf.de/nachrichten/heute/us-telekomaufsicht-beschliesst-aus-fuer-netzneutralitaet-in-den-usa-100.html">USA: Aus für Netzneutralität beschlossen - ZDFmediathek</a>
 <a href="https://www.heise.de/tp/features/Pentagon-ist-der-Aufenthaltsort-von-zehntausenden-Soldaten-unbekannt-3914935.html">Pentagon ist der Aufenthaltsort von zehntausenden Soldaten unbekannt | Telepolis</a>

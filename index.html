@@ -23,14 +23,8 @@
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
-                                    var youtube = "";
-                                    var dailymotion = "";
-                                    if ($("#" + i + " .youtube").length) {
-                                        youtube = '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>';
-                                    }
-                                    if ($("#" + i + " .dailymotion").length) {
-                                        dailymotion = '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>';
-                                    }
+                                    var youtube = $("#" + i + " .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>' : "";
+                                    var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
                                     $(youtube + dailymotion).insertAfter("#link-" + i);
                                     $("#" + i + " .youtube").remove();
@@ -42,17 +36,18 @@
                 }
             }
             function checken() {
-                if (check !== download) {
+                if (check !== download)
                     aufbauen();
-                } else {
+                else
                     setTimeout(checken, 50);
-                }
             }
             checken();
+            $("#kein_js").remove();
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
+        <h1 id="kein_js">Diese Webseite funktioniert nicht ohne Javascript</h1>
     </body>
 </html>
