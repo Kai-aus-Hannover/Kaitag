@@ -12,6 +12,7 @@
             var check = null;
             var download = null;
             function anzeigen(inhalt) {
+                $("#kein_js2").remove();
                 download = inhalt.data.tree;
             }
             function aufbauen() {
@@ -43,13 +44,14 @@
             }
             $(document).ready(function(){
                 checken();
-                $("#kein_js").remove();
+                $("#kein_js1").remove();
             });
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
-        <h1 id="kein_js">Diese Webseite funktioniert nicht ohne Javascript</h1>
+        <h1 id="kein_js1">Diese Webseite funktioniert nicht ohne Javascript.</h1>
+        <h1 id="kein_js2">JSONP von api.github.com funktioniert nicht.</h1>
     </body>
 </html>
