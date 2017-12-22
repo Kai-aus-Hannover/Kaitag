@@ -99,7 +99,7 @@ h1 {
 }
 .fehler {
   opacity:0;
-  animation:fehler 5s normal forwards 5s;
+  animation:fehler 5s normal forwards 1s;
 }
 @keyframes fehler {
   0% {
