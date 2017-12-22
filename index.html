@@ -12,7 +12,7 @@
             var check = null;
             var download = null;
             function anzeigen(inhalt) {
-                //$("#kein_js2").remove();
+                $("#kein_js2").remove();
                 download = inhalt.data.tree;
             }
             function aufbauen() {
@@ -44,7 +44,7 @@
             }
             $(document).ready(function(){
                 checken();
-                //$("#kein_js1").remove();
+                $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
             });
         </script>
@@ -52,7 +52,7 @@
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
-        <h1 class="fehler" id="kein_js1">Diese Webseite funktioniert nicht ohne Javascript.</h1>
+        <h1 class="fehler" id="kein_js1">Für diese Webseite muss Javascript aktiviert sein.</h1>
         <h1 class="fehler" id="kein_js2">Warten auf Antwort von api.github.com</h1>
     </body>
 </html>
