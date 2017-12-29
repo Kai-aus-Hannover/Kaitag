@@ -37,10 +37,7 @@
                 }
             }
             function checken() {
-                if (check !== download)
-                    aufbauen();
-                else
-                    setTimeout(checken, 50);
+                check !== download ? aufbauen() : setTimeout(checken, 50);
             }
             $(document).ready(function(){
                 checken();
