@@ -81,6 +81,7 @@ h1 {
   width:160px;
   background:red;
   color:white;
+  font-weight:bold;
 }
 .youtube:hover {
   background:#eee;
