@@ -96,7 +96,7 @@ h1 {
   background:red;
   padding:20px;
   border-radius:50px;
-  margin:50px auto;
+  margin:50px auto !important;
   max-width:1200px;
 }
 .fehler div {
