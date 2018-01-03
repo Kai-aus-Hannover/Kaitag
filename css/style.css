@@ -93,13 +93,16 @@ h1 {
 .fehler {
   opacity:0;
   animation:fehler 10s normal forwards 1s;
-  color:white;
-  font-weight:bold;
   background:red;
   padding:20px;
   border-radius:50px;
   margin:50px auto;
   max-width:1200px;
+}
+.fehler div {
+  color:white;
+  background:red;
+  font-weight:bold;
 }
 @keyframes fehler {
   0% {
