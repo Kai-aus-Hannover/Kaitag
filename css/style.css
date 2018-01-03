@@ -100,7 +100,9 @@ h1 {
 }
 .fehler {
   opacity:0;
-  animation:fehler 5s normal forwards 1s;
+  animation:fehler 10s normal forwards 1s;
+  color:red;
+  font-weight:bold;
 }
 @keyframes fehler {
   0% {
