@@ -91,18 +91,15 @@ h1 {
   color:white;
 }
 .fehler {
-  opacity:0;
   animation:fehler 10s normal forwards 1s;
+  margin:50px auto !important;
+  border-radius:50px;
+  max-width:1200px;
+  font-weight:bold;
   background:red;
   padding:20px;
-  border-radius:50px;
-  margin:50px auto !important;
-  max-width:1200px;
-}
-.fehler div {
   color:white;
-  background:red;
-  font-weight:bold;
+  opacity:0;
 }
 @keyframes fehler {
   0% {
