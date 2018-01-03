@@ -50,14 +50,6 @@ h1 {
   margin:0 !important;
   cursor:default;
 }
-.fehler404 {
-  color:white;
-  background:#990000;
-  font-size:30px;
-  width:100%;
-  text-align:center;
-  padding:10px;
-}
 .versteckt,
 .versteckt + .inhalt {
   display:none; 
@@ -105,8 +97,9 @@ h1 {
   font-weight:bold;
   background:red;
   padding:20px;
-  border-radius:10px;
-  margin-top:50px;
+  border-radius:50px;
+  margin:50px auto;
+  max-width:1200px;
 }
 @keyframes fehler {
   0% {
