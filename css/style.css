@@ -60,7 +60,7 @@ h1 {
   overflow:hidden;
 }
 .videos {
- position:absolute;
+  position:absolute;
   z-index:10;
   margin-top:-47.4px;
   right:0;
