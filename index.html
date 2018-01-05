@@ -23,10 +23,11 @@
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
+                                    var dtube = $("#" + i + " .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#" + i + " .dtube").attr("href") + '">DTube</a>' : "";
                                     var youtube = $("#" + i + " .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>' : "";
                                     var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
-                                    $('<div class="videos">' + youtube + dailymotion + '</div>').insertAfter("#link-" + i);
+                                    $('<div class="videos">' + dtube + youtube + dailymotion + '</div>').insertAfter("#link-" + i);
                                     $("#kein_js2").remove();
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
