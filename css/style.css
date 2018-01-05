@@ -72,6 +72,17 @@ h1 {
   box-sizing:border-box;
   float:right;
 }
+.dtube {
+  right:0;
+  width:160px;
+  background:red;
+  color:white;
+  font-weight:bold;
+}
+.dtube:hover {
+  background:#eee;
+  color:red;
+}
 .youtube {
   right:0;
   width:160px;
