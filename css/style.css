@@ -73,11 +73,12 @@ h1 {
   float:right;
 }
 .dtube {
-  width:140px;
+  width:115px;
   background-image: url(../logo/dtube.png);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+  color:transparent;
 }
 .dtube:hover {
   background-image: url(../logo/dtube-hover.png);
