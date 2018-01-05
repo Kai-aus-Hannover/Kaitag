@@ -59,14 +59,18 @@ h1 {
   height:0;
   overflow:hidden;
 }
-.dailymotion,
-.youtube {
-  position:absolute;
+.videos {
+ position:absolute;
+  z-index:10;
+  margin-top:-47.4px;
+  right:0;
+}
+.videos div {
   padding:5px 30px;
   font-size:1.5rem;
   z-index:10;
-  margin-top:-47.4px;
   box-sizing:border-box;
+  float:right;
 }
 .youtube {
   right:0;
