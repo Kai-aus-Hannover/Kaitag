@@ -73,18 +73,16 @@ h1 {
   float:right;
 }
 .dtube {
-  right:0;
-  width:160px;
-  background:red;
-  color:white;
-  font-weight:bold;
+  width:140px;
+  background-image:url(logo/dtube.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 .dtube:hover {
-  background:#eee;
-  color:red;
+  background-image:url(logo/dtube-hover.png);
 }
 .youtube {
-  right:0;
   width:160px;
   background:red;
   color:white;
@@ -95,7 +93,6 @@ h1 {
   color:red;
 }
 .dailymotion {
-  right:160px;
   width:200px;
   font-weight:bold;
   background:white;
