@@ -12,7 +12,6 @@
             var check = null;
             var download = null;
             function anzeigen(inhalt) {
-                $("#kein_js2").remove();
                 download = inhalt.data.tree;
             }
             function aufbauen() {
@@ -28,6 +27,7 @@
                                     var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
                                     $(youtube + dailymotion).insertAfter("#link-" + i);
+                                    $("#kein_js2").remove();
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }
