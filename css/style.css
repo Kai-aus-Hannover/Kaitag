@@ -82,6 +82,7 @@ h1 {
 }
 .dtube:hover {
   background-image: url(../logo/dtube-hover.png);
+  color:transparent;
 }
 .youtube {
   width:160px;
