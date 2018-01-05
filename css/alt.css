@@ -59,32 +59,17 @@ h1 {
   height:0;
   overflow:hidden;
 }
-.videos {
+.dailymotion,
+.youtube {
   position:absolute;
-  z-index:10;
-  margin-top:-47.4px;
-  right:0;
-}
-.videos a {
   padding:5px 30px;
   font-size:1.5rem;
   z-index:10;
+  margin-top:-47.4px;
   box-sizing:border-box;
-  float:right;
-}
-.dtube {
-  width:115px;
-  background-image: url(../logo/dtube.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  color:transparent;
-}
-.dtube:hover {
-  background-image: url(../logo/dtube-hover.png);
-  color:transparent;
 }
 .youtube {
+  right:0;
   width:160px;
   background:red;
   color:white;
@@ -95,6 +80,7 @@ h1 {
   color:red;
 }
 .dailymotion {
+  right:160px;
   width:200px;
   font-weight:bold;
   background:white;
