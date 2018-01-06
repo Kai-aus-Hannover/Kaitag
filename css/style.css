@@ -74,14 +74,16 @@ h1 {
 }
 .dtube {
   width:115px;
-  background-image: url(../logo/dtube.png);
+  background:white;
+  background-image: url(../logo/dtube.svg);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
   color:transparent;
 }
 .dtube:hover {
-  background-image: url(../logo/dtube-hover.png);
+  background:black;
+  background-image: url(../logo/dtube-hover.svg);
   color:transparent;
 }
 .youtube {
