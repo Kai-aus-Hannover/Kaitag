@@ -140,6 +140,9 @@ h1 {
   .youtube {
     width:100%;
   }
+  .dtube 
+    background-position:left;
+  }
 }
 @media (max-width:400px) {
   h1 {
