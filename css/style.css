@@ -131,10 +131,13 @@ h1 {
   }
 }
 @media (max-width:750px) {
-  .dailymotion,
-  .youtube {
+  .videos {
     margin-top:unset;
     position:unset;
+  }
+  .dtube,
+  .dailymotion,
+  .youtube {
     width:100%;
   }
 }
@@ -143,6 +146,7 @@ h1 {
     font-size:12vw;
   }
   .link,
+  .dtube,
   .dailymotion,
   .youtube {
     font-size:6vw;
