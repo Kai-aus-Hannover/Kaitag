@@ -149,6 +149,6 @@ h1 {
   .dtube,
   .dailymotion,
   .youtube {
-    font-size:6vw;
+    font-size:6vw !important;
   }
 }
