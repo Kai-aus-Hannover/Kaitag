@@ -27,8 +27,9 @@
                                     var youtube = $("#" + i + " .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>' : "";
                                     var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
-                                    $('<div class="videos">' + youtube + dtube + dailymotion + '</div>').insertAfter("#link-" + i);
+                                    $('<div class="videos">' + dtube + youtube + dailymotion + '</div>').insertAfter("#link-" + i);
                                     $("#kein_js2").remove();
+                                    $("#" + i + " .dtube").remove();
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
                                 }

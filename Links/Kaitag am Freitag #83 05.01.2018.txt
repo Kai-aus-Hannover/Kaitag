@@ -1,4 +1,6 @@
 <a href="https://www.youtube.com/watch?v=UiPAUbRclSg" class="youtube"><YouTube</a>
+<a class="dailymotion" href="http://www.dailymotion.com/video/x6cqoyy">dailymotion</a>
+<a class="dtube" href="https://d.tube/#!/v/kai-aus-hannover/3yzjpih1">DTube</a>
 <a href="https://de.sputniknews.com/politik/20180105318948691-fbi-ermittlungen-clinton/">FBI startet neue Ermittlung gegen Hillary Clinton - Medien - Sputnik Deutschland</a>
 <a href="http://alles-schallundrauch.blogspot.de/2018/01/george-soros-zwitschert-nicht-mehr.html">Alles Schall und Rauch: George Soros zwitschert nicht mehr</a>
 <a href="https://www.mdr.de/nachrichten/politik/ausland/trump-rechnet-mit-bannon-ab-100.html">Trump rechnet mit harschen Worten mit Stephen Bannon ab | MDR.DE</a>
