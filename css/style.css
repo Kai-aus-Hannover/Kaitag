@@ -91,29 +91,29 @@ h1 {
 }
 .youtube {
   width:160px;
-  /*
   background:red;
   color:white;
   font-weight:bold;
-  */
+  /*
   background:white;
   background-image: url(../logo/youtube.png);
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
   color:transparent;
+  */
 }
 .youtube:hover {
-  /*
   background:#eee;
   color:red;
-  */
+  /*
   background:black;
   background-image: url(../logo/youtube-hover.jpg);
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
   color:transparent;
+  */
 }
 .dailymotion {
   width:200px;
