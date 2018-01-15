@@ -138,6 +138,9 @@ h1 {
   color:white;
   opacity:0;
 }
+.bild_sofort_laden {
+  width:0;
+}
 @keyframes fehler {
   0% {
     opacity:0;
