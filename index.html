@@ -19,7 +19,7 @@
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
                         var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
-                        $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Ups Fehler 404</div></div>');
+                        $("body").append('<a class="link collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
