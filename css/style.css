@@ -94,26 +94,10 @@ h1 {
   background:red;
   color:white;
   font-weight:bold;
-  /*
-  background:white;
-  background-image: url(../logo/youtube.png);
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
-  color:transparent;
-  */
 }
 .youtube:hover {
   background:#eee;
   color:red;
-  /*
-  background:black;
-  background-image: url(../logo/youtube-hover.jpg);
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
-  color:transparent;
-  */
 }
 .dailymotion {
   width:200px;
@@ -137,6 +121,11 @@ h1 {
   padding:20px;
   color:white;
   opacity:0;
+}
+.fehler404 {
+  background:red;
+  color:white;
+  padding:10px 60px;
 }
 .bild_sofort_laden {
   width:0;
