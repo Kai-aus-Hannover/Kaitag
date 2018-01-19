@@ -1,5 +1,6 @@
 ﻿<a class="youtube" href="https://youtu.be/aksX59JqB2g">YouTube</a>
 <a class="dailymotion" href="https://www.dailymotion.com/video/x6ddf5e">dailymotion</a>
+<a class="dtube" href="https://d.tube/#!/v/kai-aus-hannover/ggflxdn8">DTube</a>
 <a href="http://www.sueddeutsche.de/panorama/hawai-falscher-raketenalarm-schreckt-hawaiianer-auf-1.3824392">(9+)Hawaii - Falscher Raketenalarm schreckt Hawaiianer auf - Panorama - Süddeutsche.de</a>
 <a href="https://gop.com/the-highly-anticipated-2017-fake-news-awards/">Die hochgeahnten 2017 Fake News Awards | GOP</a>
 <a href="https://deutsche-wirtschafts-nachrichten.de/2018/01/16/china-rating-agentur-stuft-kreditwuerdigkeit-der-usa-herab/?utm_source=Das+t%C3%A4gliche+DWN+Telegramm&utm_campaign=665559aa59-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_3752338fa9-665559aa59-106990473">China: Rating-Agentur stuft Kreditwürdigkeit der USA herab - DWN</a>
