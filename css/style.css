@@ -126,6 +126,8 @@ h1 {
   background:red;
   color:white;
   padding:10px 60px;
+  font-size:2rem;
+  font-weight:bold;
 }
 .bild_sofort_laden {
   width:0;
