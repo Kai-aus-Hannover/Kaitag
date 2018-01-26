@@ -28,6 +28,18 @@ a {
   background:blue;
   color:#eee;
 }
+.link.versteckt {
+  background:#FFFACD;
+}
+.link.versteckt:hover {
+  background:#FFA500;
+}
+/*
+.versteckt,
+.versteckt + .inhalt {
+  display:none; 
+}
+*/
 .inhalt {
   position:relative;
 }
@@ -49,10 +61,6 @@ h1 {
   font-size:3rem;
   margin:0 !important;
   cursor:default;
-}
-.versteckt,
-.versteckt + .inhalt {
-  display:none; 
 }
 .collapse:not(.show) {
   display:block;
