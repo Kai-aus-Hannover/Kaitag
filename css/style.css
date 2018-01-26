@@ -30,6 +30,7 @@ a {
 }
 .link.versteckt {
   background:#FFFACD;
+  color:black;
 }
 .link.versteckt:hover {
   background:#FFA500;
