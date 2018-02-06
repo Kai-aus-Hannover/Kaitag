@@ -35,12 +35,6 @@ a {
 .link.versteckt:hover {
   background:#FFA500;
 }
-/*
-.versteckt,
-.versteckt + .inhalt {
-  display:none; 
-}
-*/
 .inhalt {
   position:relative;
 }
@@ -140,6 +134,10 @@ h1 {
 }
 .bild_sofort_laden {
   width:0;
+}
+#erklärung {
+  margin:0 auto;
+  display:block;
 }
 @keyframes fehler {
   0% {
