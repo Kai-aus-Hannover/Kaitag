@@ -138,6 +138,7 @@ h1 {
 #erklärung img {
   margin:0 auto;
   display:block;
+  max-height:30cm;
 }
 @keyframes fehler {
   0% {
