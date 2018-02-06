@@ -137,6 +137,7 @@ h1 {
 }
 #erklärung {
   margin:0 auto;
+  display:block;
 }
 @keyframes fehler {
   0% {
