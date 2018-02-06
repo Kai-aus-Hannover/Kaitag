@@ -15,9 +15,6 @@ a {
   border-top:2px solid blue;
   transition:0.2s ease;
 }
-.inhalt a {
-  border-top:2px solid #eee;
-}
 .link {
   padding:5px 2%;
   background:lightblue;
@@ -49,6 +46,20 @@ a {
 .inhalt a:hover {
   background:#606060;
   color:gold;
+}
+.inhalt a,
+.inhalt .keine_links {
+  border-top:2px solid #eee;
+}
+.keine_links {
+  padding:5px 4%;
+  background:gold;
+  color:black;
+  width:100%;
+  display:block;
+  text-decoration:none !important;
+  border-top:2px solid blue;
+  transition:0.2s ease;
 }
 h1 {
   text-align:center;
