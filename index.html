@@ -37,6 +37,9 @@
                 }
             }
             function aufbauen() {
+                //
+                //
+                //
                 eingabe(1);
                 eingabe(2);
                 eingabe(3);
@@ -50,7 +53,8 @@
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
                                     var tag = c;
-                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag, ausgabe[jahr][monat][tag]);
+                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
+                                    console.log(ausgabe[jahr][monat][tag]);
                                     console.log(typeof ausgabe[jahr][monat][tag]);
                                     if (typeof ausgabe[jahr][monat][tag] === "object" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
@@ -83,6 +87,9 @@
                     }
                 }
                 /*
+                //
+                //
+                //
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
@@ -105,6 +112,9 @@
                         })(i, pfad);
                     }
                 }
+                //
+                //
+                //
                 */
             }
             function checken() {
