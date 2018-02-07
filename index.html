@@ -53,12 +53,12 @@
                                     var tag = c;
                                     console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     console.log(ausgabe[jahr][monat][tag]);
-                                    if (typeof ausgabe[jahr][monat][tag] === "object") {
+                                    if (typeof ausgabe[jahr][monat][tag] === "object" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
                                         console.log(pfad);
                                         console.log(pfad.substring(0, 6));
                                         console.log(ausgabe[jahr][monat][tag].type);
-                                        if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
+                                        if (pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                                             $("body").append('<a class="link versteckt collapsed" id="link-' + tag + '"data-toggle="collapse" href="#' + tag + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + tag + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                                             (function(i, pfad) {
