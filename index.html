@@ -20,7 +20,7 @@
                         var pfad = download[i].path;
                         var test = pfad.split(".");
                         console.log(test);
-                        console.log("tag "+test[0].slice(-2)+" monat "+test[1]+" jahr "+test[2].slice(4));
+                        console.log("tag "+test[0].slice(-2)+" monat "+test[1]+" jahr "+test[2].slice(0, 4));
                         var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                         $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                         (function(i, pfad) {
