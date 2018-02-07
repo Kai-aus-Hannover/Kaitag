@@ -48,11 +48,10 @@
                     if (typeof ausgabe[jahr] === "object") {
                         for (var b = ausgabe[jahr].length; b >= 0; --b) {
                             var monat = b.length == 2 ? b : "0"+b;
-                            console.log(monat);
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length; c >= 0; --c) {
                                     var tag = c.length == 2 ? c : "0"+c;
-                                    console.log(tag);
+                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
                                         if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
