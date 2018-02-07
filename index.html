@@ -8,90 +8,13 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            $ = jQuery;
-            download = null;
-            ausgabe = [];
+            var $ = jQuery;
+            var check = null;
+            var download = null;
             function anzeigen(inhalt) {
                 download = inhalt.data.tree;
-                aufbauen();
-            }
-            function eingabe(A) {
-                for (var i = download.length - 1; i >= 0; --i) {
-                    if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
-                        var Z = 0;
-                        var datum = download[i].path.split(".");
-                        var jahr = Number(datum[Z+2].slice(0, 4));
-                        var monat = Number(datum[Z+1]);
-                        var tag = Number(datum[Z].slice(-2));
-                        switch(A) {
-                            case 1:
-                                ausgabe[jahr] = [];
-                                break;
-                            case 2:
-                                ausgabe[jahr][monat] = [];
-                                break;
-                            case 3:
-                                ausgabe[jahr][monat][tag] = download[i].path;
-                                break;
-                        } 
-                    }
-                }
             }
             function aufbauen() {
-                //
-                //
-                //
-                /*
-                eingabe(1);
-                eingabe(2);
-                eingabe(3);
-                console.log(ausgabe);
-                var i = 1;
-                for (var a = ausgabe.length - 1; a >= 0; --a) {
-                    var jahr = a;
-                    if (typeof ausgabe[jahr] === "object") {
-                        for (var b = ausgabe[jahr].length - 1; b >= 0; --b) {
-                            var monat = b;
-                            if (typeof ausgabe[jahr][monat] === "object") {
-                                for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
-                                    var tag = c;
-                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
-                                    console.log(ausgabe[jahr][monat][tag]);
-                                    console.log(typeof ausgabe[jahr][monat][tag]);
-                                    if (typeof ausgabe[jahr][monat][tag] === "object" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
-                                        var pfad = ausgabe[jahr][monat][tag].path;
-                                        console.log(pfad);
-                                        console.log(pfad.substring(0, 6));
-                                        console.log(ausgabe[jahr][monat][tag].type);
-                                        if (pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
-                                            var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
-                                            $("body").append('<a class="link versteckt collapsed" id="link-' + tag + '"data-toggle="collapse" href="#' + tag + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + tag + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
-                                            (function(i, pfad) {
-                                                $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
-                                                    if (ergebnis == "success") {
-                                                        var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
-                                                        var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
-                                                        var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
-                                                        $("#link-" + i).removeClass("versteckt");
-                                                        $('<div class="videos">'+dtube+youtube+dailymotion+'</div>').insertAfter("#link-" + i);
-                                                        $("#kein_js2").remove();
-                                                        $("#"+i+" .dtube").remove();
-                                                        $("#"+i+" .youtube").remove();
-                                                        $("#"+i+" .dailymotion").remove();
-                                                    }
-                                                });
-                                            })(i++, pfad);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                */
-                //
-                //
-                //
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
@@ -100,31 +23,26 @@
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
-                                    var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
-                                    var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
-                                    var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
+                                    var dtube = $("#" + i + " .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#" + i + " .dtube").attr("href") + '">DTube</a>' : "";
+                                    var youtube = $("#" + i + " .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>' : "";
+                                    var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
-                                    $('<div class="videos">'+dtube+youtube+dailymotion+'</div>').insertAfter("#link-" + i);
+                                    $('<div class="videos">' + dtube + youtube + dailymotion + '</div>').insertAfter("#link-" + i);
                                     $("#kein_js2").remove();
-                                    $("#"+i+" .dtube").remove();
-                                    $("#"+i+" .youtube").remove();
-                                    $("#"+i+" .dailymotion").remove();
+                                    $("#" + i + " .dtube").remove();
+                                    $("#" + i + " .youtube").remove();
+                                    $("#" + i + " .dailymotion").remove();
                                 }
                             });
                         })(i, pfad);
                     }
                 }
-                //
-                //
-                //
             }
-            /*
             function checken() {
-                download !== null ? aufbauen() : setTimeout(checken, 50);
+                check !== download ? aufbauen() : setTimeout(checken, 50);
             }
-            */
             $(document).ready(function(){
-                //checken();
+                checken();
                 $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
                 $(".bild_sofort_laden").remove();
@@ -134,7 +52,6 @@
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
-        <!--<div class="fehler">Wartungsmodus - kurzfristig nicht erreichbar</div>-->
         <div class="fehler" id="kein_js1">Fehler Javascript ist nicht aktiviert.</div>
         <div class="fehler" id="kein_js2">Fehler 404 keine Antwort von api.github.com</div>
         <div class="bild_sofort_laden">
