@@ -21,12 +21,22 @@
                         var j = 0;
                         var pfad = download[i].path;
                         var test = pfad.split(".");
-                        console.log(test.length);
-                        console.log(test);
                         var tag = test[j].slice(-2);
                         var monat = test[j+1];
                         var jahr = test[j+2].slice(0, 4);
+                        if (typeof ausgabe[jahr] === 'undefined') {
+                            ausgabe[jahr] = [];
+                        }
+                        if (typeof ausgabe[jahr][monat] === 'undefined') {
+                            ausgabe[jahr][monat] = [];
+                        }
+                        if (typeof ausgabe[jahr][monat][tag] === 'undefined') {
+                            ausgabe[jahr][monat][tag] = download[i].path;
+                        }
+                        console.log(test.length);
+                        console.log(test);
                         console.log("tag "+tag+" monat "+monat+" jahr "+jahr);
+                        console.log(ausgabe);
                     }
                 }
                 for (var i = download.length - 1; i >= 0; --i) {
