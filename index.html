@@ -20,9 +20,9 @@
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var Z = 0;
                         var datum = download[i].path.split(".");
-                        var jahr = datum[Z+2].slice(0, 4);
-                        var monat = datum[Z+1];
-                        var tag = datum[Z].slice(-2);
+                        var jahr = Number(datum[Z+2].slice(0, 4));
+                        var monat = Number(datum[Z+1]);
+                        var tag = Number(datum[Z].slice(-2));
                         switch(A) {
                             case 1:
                                 ausgabe[jahr] = [];
@@ -47,10 +47,10 @@
                     var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
                         for (var b = ausgabe[jahr].length; b >= 0; --b) {
-                            var monat = b.length == 2 ? b : "0"+b;
+                            var monat = b;
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length; c >= 0; --c) {
-                                    var tag = c.length == 2 ? c : "0"+c;
+                                    var tag = c;
                                     console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
