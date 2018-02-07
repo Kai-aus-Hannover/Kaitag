@@ -1,2 +1,3 @@
 <a class="youtube" href="https://www.youtube.com/watch?v=KpGep3bxYFs"></a>
 <a class="dtube" href="https://d.tube/#!/v/kai-aus-hannover/9jrd7zfx"></a>
+<a class="dailymotion" href="https://dai.ly/x6eebpn"></a>
