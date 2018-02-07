@@ -9,7 +9,6 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
             var $ = jQuery;
-            var check = null;
             var download = null;
             var ausgabe = [];
             function anzeigen(inhalt) {
@@ -108,7 +107,7 @@
                 */
             }
             function checken() {
-                check !== download ? aufbauen() : setTimeout(checken, 50);
+                download !== null ? aufbauen() : setTimeout(checken, 50);
             }
             $(document).ready(function(){
                 checken();
