@@ -43,13 +43,13 @@
                 eingabe(3);
                 console.log(ausgabe);
                 var i = 1;
-                for (var a = ausgabe.length; a >= 0; --a) {
+                for (var a = ausgabe.length - 1; a >= 0; --a) {
                     var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
-                        for (var b = ausgabe[jahr].length; b >= 0; --b) {
+                        for (var b = ausgabe[jahr].length - 1; b >= 0; --b) {
                             var monat = b;
                             if (typeof ausgabe[jahr][monat] === "object") {
-                                for (var c = ausgabe[jahr][monat].length; c >= 0; --c) {
+                                for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
                                     var tag = c;
                                     console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     console.log(ausgabe[jahr][monat][tag]);
