@@ -24,6 +24,7 @@
                         var tag = test[j].slice(-2);
                         var monat = test[j+1];
                         var jahr = test[j+2].slice(0, 4);
+                        console.log(typeof typeof ausgabe[jahr]);
                         if (typeof ausgabe[jahr] === 'undefined') {
                             ausgabe[jahr] = [];
                         }
