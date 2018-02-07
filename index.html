@@ -42,16 +42,17 @@
                 eingabe(2);
                 eingabe(3);
                 console.log(ausgabe);
+                /*
                 for (var k = ausgabe.length; k >= 0; --k) {
                     console.log("k: "+k);
                     console.log(typeof ausgabe[k]);
-                    if (typeof ausgabe[k] !== "undefined") {
+                    if (typeof ausgabe[k] === "object") {
                         for (var j = ausgabe[k].length; j >= 0; --j) {
                             console.log("j: "+j);
-                            if (typeof ausgabe[k][j] !== "undefined") {
+                            if (typeof ausgabe[k][j] === "object") {
                                 for (var i = ausgabe[k][j].length; i >= 0; --i) {
                                     console.log("i: "+i);
-                                    if (typeof ausgabe[k][j][i] !== "undefined") {
+                                    if (typeof ausgabe[k][j][i] === "object") {
                                         var pfad = ausgabe[k][j][i].path;
                                         var typ = ausgabe[k][j][i].type;
                                         if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && typ == "blob") {
@@ -79,7 +80,7 @@
                         }
                     }
                 }
-                /*
+                */
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
@@ -102,7 +103,6 @@
                         })(i, pfad);
                     }
                 }
-                */
             }
             function checken() {
                 check !== download ? aufbauen() : setTimeout(checken, 50);
