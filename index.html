@@ -18,15 +18,11 @@
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
-                        var j = 0;
-                        var pfad = download[i].path;
-                        var test = pfad.split(".");
-                        var tag = test[j].slice(-2);
-                        var monat = test[j+1];
-                        var jahr = test[j+2].slice(0, 4);
-                        //ausgabe[jahr] = [];
-                        //ausgabe[jahr][monat] = [];
-                        //ausgabe[jahr][monat][tag] = download[i].path;
+                        var Z = 0;
+                        var datum = download[i].path.split(".");
+                        var jahr = datum[Z+2].slice(0, 4);
+                        var monat = datum[Z+1];
+                        var tag = datum[Z].slice(-2);
                         switch(A) {
                             case 1:
                                 ausgabe[jahr] = [];
@@ -46,6 +42,34 @@
                 eingabe(2);
                 eingabe(3);
                 console.log(ausgabe);
+                for (var k = ausgabe.length - 1; k >= 0; --k) {
+                    for (var j = ausgabe[k].length - 1; j >= 0; --j) {
+                        for (var i = ausgabe[k][j].length - 1; i >= 0; --i) {
+                            var pfad = ausgabe[k][j][i].path;
+                            var typ = ausgabe[k][j][i].type;
+                            if (pfad.substring(0, 6) == "Links/" && typ == "blob") {
+                                var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
+                                $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
+                                (function(i, pfad) {
+                                    $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
+                                        if (ergebnis == "success") {
+                                            var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
+                                            var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
+                                            var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
+                                            $("#link-" + i).removeClass("versteckt");
+                                            $('<div class="videos">'+dtube+youtube+dailymotion+'</div>').insertAfter("#link-" + i);
+                                            $("#kein_js2").remove();
+                                            $("#"+i+" .dtube").remove();
+                                            $("#"+i+" .youtube").remove();
+                                            $("#"+i+" .dailymotion").remove();
+                                        }
+                                    });
+                                })(i, pfad);
+                            }
+                        }
+                    }
+                }
+                /*
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
@@ -68,6 +92,7 @@
                         })(i, pfad);
                     }
                 }
+                */
             }
             function checken() {
                 check !== download ? aufbauen() : setTimeout(checken, 50);
