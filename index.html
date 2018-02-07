@@ -50,7 +50,7 @@
                             var monat = b == 2 ? b : "0"+b;
                             console.log(monat);
                             if (typeof ausgabe[jahr][monat] === "object") {
-                                for (var c = ausgabe[k][monat].length; c >= 0; --c) {
+                                for (var c = ausgabe[jahr][monat].length; c >= 0; --c) {
                                     var tag = c == 2 ? c : "0"+c;
                                     console.log(tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
