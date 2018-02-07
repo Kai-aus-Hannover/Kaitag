@@ -51,7 +51,7 @@
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
                                     var tag = c;
-                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag, ausgabe[jahr][monat][tag]);
+                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag, typeof ausgabe[jahr][monat][tag], ausgabe[jahr][monat][tag]);
                                     if (typeof ausgabe[jahr][monat][tag] === "object" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
                                         console.log(pfad);
