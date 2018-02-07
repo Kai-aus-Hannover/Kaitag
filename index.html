@@ -15,23 +15,27 @@
                 download = inhalt.data.tree;
             }
             function aufbauen() {
+                console.log(download);
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var pfad = download[i].path;
+                        var test = pfad.split(".");
+                        console.log(test);
+                        console.log("hier "+test[1]+" weiter "+test[2]+" jahr "+test[3]);
                         var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                         $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                         (function(i, pfad) {
                             $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                 if (ergebnis == "success") {
-                                    var dtube = $("#" + i + " .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#" + i + " .dtube").attr("href") + '">DTube</a>' : "";
-                                    var youtube = $("#" + i + " .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#" + i + " .youtube").attr("href") + '">YouTube</a>' : "";
-                                    var dailymotion = $("#" + i + " .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#" + i + " .dailymotion").attr("href") + '">dailymotion</a>' : "";
+                                    var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
+                                    var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
+                                    var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
                                     $("#link-" + i).removeClass("versteckt");
-                                    $('<div class="videos">' + dtube + youtube + dailymotion + '</div>').insertAfter("#link-" + i);
+                                    $('<div class="videos">'+dtube+youtube+dailymotion+'</div>').insertAfter("#link-" + i);
                                     $("#kein_js2").remove();
-                                    $("#" + i + " .dtube").remove();
-                                    $("#" + i + " .youtube").remove();
-                                    $("#" + i + " .dailymotion").remove();
+                                    $("#"+i+" .dtube").remove();
+                                    $("#"+i+" .youtube").remove();
+                                    $("#"+i+" .dailymotion").remove();
                                 }
                             });
                         })(i, pfad);
