@@ -42,7 +42,7 @@
                 eingabe(2);
                 eingabe(3);
                 console.log(ausgabe);
-                var i = 0;
+                var i = 1;
                 for (var a = ausgabe.length; a >= 0; --a) {
                     var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
@@ -55,9 +55,7 @@
                                     console.log(tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
-                                        var typ = ausgabe[jahr][monat][tag].type;
-                                        if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && typ == "blob") {
-                                            i++;
+                                        if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                                             $("body").append('<a class="link versteckt collapsed" id="link-' + tag + '"data-toggle="collapse" href="#' + tag + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + tag + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                                             (function(i, pfad) {
@@ -74,7 +72,7 @@
                                                         $("#"+i+" .dailymotion").remove();
                                                     }
                                                 });
-                                            })(i, pfad);
+                                            })(i++, pfad);
                                         }
                                     }
                                 }
