@@ -14,7 +14,7 @@
             function anzeigen(inhalt) {
                 download = inhalt.data.tree;
             }
-            function eingabe(A) {
+            function eingabe(ausgabe, A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var j = 0;
@@ -42,9 +42,9 @@
             }
             function aufbauen() {
                 var ausgabe = [];
-                eingabe(1);
-                eingabe(2);
-                eingabe(3);
+                eingabe(ausgabe, 1);
+                eingabe(ausgabe, 2);
+                eingabe(ausgabe, 3);
                 console.log(ausgabe);
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
