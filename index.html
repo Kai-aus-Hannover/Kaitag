@@ -47,11 +47,11 @@
                     var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
                         for (var b = ausgabe[jahr].length; b >= 0; --b) {
-                            var monat = b == 2 ? b : "0"+b;
+                            var monat = b.length == 2 ? b : "0"+b;
                             console.log(monat);
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length; c >= 0; --c) {
-                                    var tag = c == 2 ? c : "0"+c;
+                                    var tag = c.length == 2 ? c : "0"+c;
                                     console.log(tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
@@ -121,7 +121,7 @@
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
-        <div class="fehler" id="kein_js1">Wartungsmodus - kurzfristig nicht erreichbar</div>
+        <div class="fehler">Wartungsmodus - kurzfristig nicht erreichbar</div>
         <!--
         <div class="fehler" id="kein_js1">Fehler Javascript ist nicht aktiviert.</div>
         <div class="fehler" id="kein_js2">Fehler 404 keine Antwort von api.github.com</div>
