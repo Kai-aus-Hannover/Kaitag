@@ -32,11 +32,17 @@
                                     $("#" + i + " .dtube").remove();
                                     $("#" + i + " .youtube").remove();
                                     $("#" + i + " .dailymotion").remove();
+                                    if (istLeer($("#" + i))) {
+                                        $("#" + i).html('<div class="keine_links">Für dieses Video gibt es keine weiterführenden Links</div>');
+                                    }
                                 }
                             });
                         })(i, pfad);
                     }
                 }
+            }
+            function istLeer(el){
+                return !$.trim(el.html())
             }
             function checken() {
                 check !== download ? aufbauen() : setTimeout(checken, 50);
