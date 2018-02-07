@@ -8,11 +8,12 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            var $ = jQuery;
-            var download = null;
-            var ausgabe = [];
+            $ = jQuery;
+            download = null;
+            ausgabe = [];
             function anzeigen(inhalt) {
                 download = inhalt.data.tree;
+                aufbauen();
             }
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
@@ -40,6 +41,7 @@
                 //
                 //
                 //
+                /*
                 eingabe(1);
                 eingabe(2);
                 eingabe(3);
@@ -86,7 +88,7 @@
                         }
                     }
                 }
-                /*
+                */
                 //
                 //
                 //
@@ -115,11 +117,12 @@
                 //
                 //
                 //
-                */
             }
+            /*
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
             }
+            */
             $(document).ready(function(){
                 checken();
                 $("#kein_js1").remove();
