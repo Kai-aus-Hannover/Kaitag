@@ -42,20 +42,24 @@
                 eingabe(2);
                 eingabe(3);
                 console.log(ausgabe);
-                for (var k = ausgabe.length; k >= 0; --k) {
-                    var jahr = k;
+                var i = 0;
+                for (var a = ausgabe.length; a >= 0; --a) {
+                    var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
-                        for (var j = ausgabe[jahr].length; j >= 0; --j) {
-                            var monat = j == 2 ? j : "0"+j;
+                        for (var b = ausgabe[jahr].length; b >= 0; --b) {
+                            var monat = b == 2 ? b : "0"+b;
                             console.log(monat);
-                            if (typeof ausgabe[jahr][j] === "object") {
-                                for (var i = ausgabe[k][j].length; i >= 0; --i) {
-                                    if (typeof ausgabe[jahr][j][i] === "object") {
-                                        var pfad = ausgabe[jahr][j][i].path;
-                                        var typ = ausgabe[jahr][j][i].type;
+                            if (typeof ausgabe[jahr][monat] === "object") {
+                                for (var c = ausgabe[k][monat].length; c >= 0; --c) {
+                                    var tag = c == 2 ? c : "0"+c;
+                                    console.log(tag);
+                                    if (typeof ausgabe[jahr][monat][tag] === "object") {
+                                        var pfad = ausgabe[jahr][monat][tag].path;
+                                        var typ = ausgabe[jahr][monat][tag].type;
                                         if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && typ == "blob") {
+                                            i++;
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
-                                            $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
+                                            $("body").append('<a class="link versteckt collapsed" id="link-' + tag + '"data-toggle="collapse" href="#' + tag + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + tag + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                                             (function(i, pfad) {
                                                 $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                     if (ergebnis == "success") {
@@ -102,6 +106,7 @@
                     }
                 }
             }
+            */
             function checken() {
                 check !== download ? aufbauen() : setTimeout(checken, 50);
             }
