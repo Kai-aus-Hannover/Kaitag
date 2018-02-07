@@ -54,6 +54,7 @@
                                     console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
+                                        console.log(pfad);
                                         if (typeof pfad !== "undefined" && pfad.substring(0, 6) == "Links/" && ausgabe[jahr][monat][tag].type == "blob") {
                                             console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag+" Pfad: "+pfad);
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
