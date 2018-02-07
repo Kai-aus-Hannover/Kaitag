@@ -11,10 +11,11 @@
             var $ = jQuery;
             var check = null;
             var download = null;
+            var ausgabe = [];
             function anzeigen(inhalt) {
                 download = inhalt.data.tree;
             }
-            function eingabe(ausgabe, A) {
+            function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var j = 0;
@@ -41,10 +42,9 @@
                 }
             }
             function aufbauen() {
-                var ausgabe = [];
-                eingabe(ausgabe, 1);
-                eingabe(ausgabe, 2);
-                eingabe(ausgabe, 3);
+                eingabe(1);
+                eingabe(2);
+                eingabe(3);
                 console.log(ausgabe);
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
