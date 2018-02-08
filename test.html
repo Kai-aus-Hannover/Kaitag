@@ -68,8 +68,8 @@
                                                         $("#"+i+" .dtube").remove();
                                                         $("#"+i+" .youtube").remove();
                                                         $("#"+i+" .dailymotion").remove();
-                                                        console.log(i);
-                                                        console.log($("#"+i).html().length);
+                                                        if ($("#"+i).html().length < 10)
+                                                            $("#"+i).html('<div class="keine_links">Für dieses Video gibt es keine weiterführenden Links</div>');
                                                     }
                                                 });
                                             })(i, pfad);
