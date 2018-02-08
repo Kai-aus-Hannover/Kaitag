@@ -45,15 +45,11 @@
                 eingabe(1);
                 eingabe(2);
                 eingabe(3);
-                console.log(ausgabe);
-                for (var a = ausgabe.length - 1; a >= 0; --a) {
-                    var jahr = a;
+                for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
                     if (typeof ausgabe[jahr] === "object") {
-                        for (var b = ausgabe[jahr].length - 1; b >= 0; --b) {
-                            var monat = b;
+                        for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
                             if (typeof ausgabe[jahr][monat] === "object") {
-                                for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
-                                    var tag = c;
+                                for (var tag = ausgabe[jahr][monat].length - 1; tag >= 0; --tag) {
                                     if (typeof ausgabe[jahr][monat][tag] === "string") {
                                         var pfad = ausgabe[jahr][monat][tag];
                                         if (pfad.substring(0, 6) == "Links/") {
