@@ -21,6 +21,13 @@ a {
   color:black;
   font-size:1.5rem;
 }
+.kaitag-aktuell,
+.kaitag-am-freitag {
+    background: deepskyblue;
+}
+.nachgedacht-nachgefragt {
+    background: darkorange;
+}
 .link:hover {
   background:blue;
   color:#eee;
