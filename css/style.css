@@ -21,7 +21,11 @@ a {
   color:black;
   font-size:1.5rem;
 }
-.kaitag-aktuell,
+.kaitag-aktuell {
+  /*
+    background: deepskyblue;
+  */
+}
 .kaitag-am-freitag {
     background: deepskyblue;
 }
