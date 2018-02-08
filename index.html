@@ -12,12 +12,10 @@
             download = null;
             ausgabe = [];
             function anzeigen(inhalt) {
-                console.log(typeof inhalt.data.tree);
-                if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
+                if (inhalt && inhalt.data && typeof inhalt.data.tree === "object")
                     download = inhalt.data.tree;
-                } else {
+                else
                     $("head").append('<meta http-equiv="refresh" content="60">');
-                }
             }
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
