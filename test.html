@@ -46,7 +46,6 @@
                 eingabe(2);
                 eingabe(3);
                 console.log(ausgabe);
-                var i = 1;
                 for (var a = ausgabe.length - 1; a >= 0; --a) {
                     var jahr = a;
                     if (typeof ausgabe[jahr] === "object") {
@@ -65,7 +64,8 @@
                                         console.log(pfad.substring(0, 6));
                                         if (pfad.substring(0, 6) == "Links/") {
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
-                                            $("body").append('<a class="link versteckt collapsed" id="link-' + tag + '"data-toggle="collapse" href="#' + tag + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + tag + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
+                                            var i = jahr+"-"+monat+"-"+tag;
+                                            $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                                             (function(i, pfad) {
                                                 $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                     if (ergebnis == "success") {
@@ -80,7 +80,7 @@
                                                         $("#"+i+" .dailymotion").remove();
                                                     }
                                                 });
-                                            })(i++, pfad);
+                                            })(i, pfad);
                                         }
                                     }
                                 }
