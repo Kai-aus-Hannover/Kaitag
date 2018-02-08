@@ -16,8 +16,8 @@
                     download = inhalt.data.tree;
                 } else {
                     $("head").append('<meta http-equiv="refresh" content="60">');
-                    $("#kein_js2").append(inhalt.data.message);
                     console.log(inhalt.data.message);
+                    $("#kein_js2").text(inhalt.data.message);
                 }
             }
             function eingabe(A) {
