@@ -12,9 +12,12 @@
             download = null;
             ausgabe = [];
             function anzeigen(inhalt) {
-                console.log("hier");
                 console.log(typeof inhalt.data.tree);
-                download = inhalt.data.tree;
+                if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
+                    download = inhalt.data.tree;
+                } else {
+                    $("head").append('<meta http-equiv="refresh" content="60">');
+                }
             }
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
@@ -55,7 +58,7 @@
                                     console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
                                     console.log(ausgabe[jahr][monat][tag]);
                                     console.log(typeof ausgabe[jahr][monat][tag]);
-                                    if (typeof ausgabe[jahr][monat][tag] === "object" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
+                                    if (typeof ausgabe[jahr][monat][tag] === "string" && typeof ausgabe[jahr][monat][tag].path !== "undefined") {
                                         var pfad = ausgabe[jahr][monat][tag].path;
                                         console.log(pfad);
                                         console.log(pfad.substring(0, 6));
