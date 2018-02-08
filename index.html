@@ -56,7 +56,7 @@
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                             var i = jahr+"-"+monat+"-"+tag;
                                             var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
-                                            $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
+                                            $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
                                             (function(i, pfad) {
                                                 $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                     if (ergebnis == "success") {
@@ -71,6 +71,8 @@
                                                         $("#"+i+" .dailymotion").remove();
                                                         if ($("#"+i).html().length < 10)
                                                             $("#"+i).html('<div class="keine_links">nur Verlinkungen zum Video vorhanden</div>');
+                                                    } else {
+                                                        $("#"+i).html('<div class="fehler404">Fehler 404</div>');
                                                     }
                                                 });
                                             })(i, pfad);
