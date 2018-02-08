@@ -55,6 +55,9 @@
                                         if (pfad.substring(0, 6) == "Links/") {
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                                             var i = jahr+"-"+monat+"-"+tag;
+                                            console.log(name.indexOf("Kaitag am Freitag"));
+                                            console.log(name.indexOf("Kaitag Aktuell"));
+                                            console.log(name.indexOf("Nachgedacht Nachgefragt"));
                                             var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
                                             $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
                                             (function(i, pfad) {
