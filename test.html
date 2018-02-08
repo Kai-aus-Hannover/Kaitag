@@ -54,14 +54,8 @@
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var c = ausgabe[jahr][monat].length - 1; c >= 0; --c) {
                                     var tag = c;
-                                    console.log("----------------------------------------------------");
-                                    console.log("Jahr: "+jahr+" Monat: "+monat+" Tag: "+tag);
-                                    console.log(ausgabe[jahr][monat][tag]);
-                                    console.log(typeof ausgabe[jahr][monat][tag]);
                                     if (typeof ausgabe[jahr][monat][tag] === "string") {
                                         var pfad = ausgabe[jahr][monat][tag];
-                                        console.log(pfad);
-                                        console.log(pfad.substring(0, 6));
                                         if (pfad.substring(0, 6) == "Links/") {
                                             var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
                                             var i = jahr+"-"+monat+"-"+tag;
