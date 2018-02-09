@@ -17,9 +17,20 @@ a {
 }
 .link {
   padding:5px 2%;
-  background:lightblue;
+  background:lavender;
   color:black;
   font-size:1.5rem;
+}
+.kaitag-aktuell {
+  /*
+    background: deepskyblue;
+  */
+}
+.kaitag-am-freitag {
+    background: lightblue;
+}
+.nachgedacht-nachgefragt {
+    background: darkorange;
 }
 .link:hover {
   background:blue;

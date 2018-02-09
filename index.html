@@ -12,11 +12,11 @@
             download = null;
             ausgabe = [];
             function anzeigen(inhalt) {
-                console.log(typeof inhalt.data.tree);
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
                 } else {
                     $("head").append('<meta http-equiv="refresh" content="60">');
+                    console.log(inhalt.data.message);
                 }
             }
             function eingabe(A) {
@@ -53,9 +53,10 @@
                                     if (typeof ausgabe[jahr][monat][tag] === "string") {
                                         var pfad = ausgabe[jahr][monat][tag];
                                         if (pfad.substring(0, 6) == "Links/") {
-                                            var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1);
+                                            var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                             var i = jahr+"-"+monat+"-"+tag;
-                                            $("body").append('<a class="link versteckt collapsed" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden oder Fehler 404</div></div>');
+                                            var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
+                                            $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
                                             (function(i, pfad) {
                                                 $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                     if (ergebnis == "success") {
@@ -69,7 +70,10 @@
                                                         $("#"+i+" .youtube").remove();
                                                         $("#"+i+" .dailymotion").remove();
                                                         if ($("#"+i).html().length < 10)
-                                                            $("#"+i).html('<div class="keine_links">nur Verlinkungen zum Video vorhanden</div>');
+                                                            $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
+                                                        $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
+                                                    } else {
+                                                        $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
                                                     }
                                                 });
                                             })(i, pfad);
@@ -95,12 +99,12 @@
     </head>
     <body>
         <h1 type="button" data-toggle="collapse" aria-expanded="true" data-target=".collapse">Kai aus Hannover Linksammlung</h1>
-        <div class="fehler" id="kein_js1">Fehler Javascript ist nicht aktiviert.</div>
-        <div class="fehler" id="kein_js2">Fehler 404 keine Antwort von api.github.com</div>
         <div class="bild_sofort_laden">
             <img src="logo/dtube.svg">
             <img src="logo/dtube-hover.svg">
         </div>
         <a class="link collapsed" id="link-erklärung" data-toggle="collapse" href="#erklärung" aria-expanded="false" aria-controls="footwear">Eidesstattliche Versicherung</a><div class="inhalt collapse" id="erklärung"><img src="bilder/EV.png"></div>
+        <div class="fehler" id="kein_js1">Fehler Javascript ist nicht aktiviert.</div>
+        <div class="fehler" id="kein_js2">Fehler 404 keine Antwort von api.github.com</div>
     </body>
 </html>
