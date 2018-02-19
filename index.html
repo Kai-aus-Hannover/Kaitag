@@ -74,6 +74,7 @@
                                                         $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
                                                     } else {
                                                         $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
+                                                        console.log(ergebnis);
                                                     }
                                                 });
                                             })(i, pfad);
