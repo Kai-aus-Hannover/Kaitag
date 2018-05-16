@@ -136,11 +136,8 @@ h1 {
 }
 .bitchute {
   width:160px;
-  background:white;
+  background:#ddd;
   color:red;
-}
-.bitchute:hover {
-  font-weight:bold;
 }
 .fehler {
   animation:fehler 10s normal forwards 1s;
