@@ -24,6 +24,9 @@
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
                         var Z = 0;
                         var datum = download[i].path.split(".");
+                        if (typeof datum[Z+2] === "undefined") {
+                            console.log(download[i], download[i].path);
+                        }
                         var jahr = Number(datum[Z+2].slice(0, 4));
                         var monat = Number(datum[Z+1]);
                         var tag = Number(datum[Z].slice(-2));
