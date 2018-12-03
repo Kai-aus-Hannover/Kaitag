@@ -8,9 +8,10 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            $ = jQuery;
-            download = null;
-            ausgabe = [];
+            var $ = jQuery;
+            var download = null;
+            var ausgabe = [];
+            var zeit = 0;
             function anzeigen(inhalt) {
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
@@ -62,27 +63,30 @@
                                             var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
                                             $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
                                             (function(i, pfad) {
-                                                $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
-                                                    if (ergebnis == "success") {
-                                                        var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
-                                                        var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
-                                                        var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
-                                                        var bitchute = $("#"+i+" .bitchute").length ? '<a target="_blank" class="bitchute" href="' + $("#"+i+" .bitchute").attr("href") + '">BITCHUTE</a>' : "";
-                                                        $("#link-" + i).removeClass("versteckt");
-                                                        $('<div class="videos">'+dtube+youtube+dailymotion+bitchute+'</div>').insertAfter("#link-" + i);
-                                                        $("#kein_js2").remove();
-                                                        $("#"+i+" .dtube").remove();
-                                                        $("#"+i+" .youtube").remove();
-                                                        $("#"+i+" .dailymotion").remove();
-                                                        $("#"+i+" .bitchute").remove();
-                                                        if ($("#"+i).html().length < 10)
-                                                            $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
-                                                        $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
-                                                    } else {
-                                                        $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
-                                                        console.log(ergebnis);
-                                                    }
-                                                });
+                                                zeit += 1000;
+                                                setTimeout(function() {
+                                                    $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
+                                                        if (ergebnis == "success") {
+                                                            var dtube = $("#"+i+" .dtube").length ? '<a target="_blank" class="dtube" href="' + $("#"+i+" .dtube").attr("href") + '">DTube</a>' : "";
+                                                            var youtube = $("#"+i+" .youtube").length ? '<a target="_blank" class="youtube" href="' + $("#"+i+" .youtube").attr("href") + '">YouTube</a>' : "";
+                                                            var dailymotion = $("#"+i+" .dailymotion").length ? '<a target="_blank" class="dailymotion" href="' + $("#"+i+" .dailymotion").attr("href") + '">dailymotion</a>' : "";
+                                                            var bitchute = $("#"+i+" .bitchute").length ? '<a target="_blank" class="bitchute" href="' + $("#"+i+" .bitchute").attr("href") + '">BITCHUTE</a>' : "";
+                                                            $("#link-" + i).removeClass("versteckt");
+                                                            $('<div class="videos">'+dtube+youtube+dailymotion+bitchute+'</div>').insertAfter("#link-" + i);
+                                                            $("#kein_js2").remove();
+                                                            $("#"+i+" .dtube").remove();
+                                                            $("#"+i+" .youtube").remove();
+                                                            $("#"+i+" .dailymotion").remove();
+                                                            $("#"+i+" .bitchute").remove();
+                                                            if ($("#"+i).html().length < 10)
+                                                                $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
+                                                            $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
+                                                        } else {
+                                                            $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
+                                                            console.log(ergebnis);
+                                                        }
+                                                    });
+                                                }, zeit);
                                             })(i, pfad);
                                         }
                                     }
