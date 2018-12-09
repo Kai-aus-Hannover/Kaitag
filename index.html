@@ -16,7 +16,7 @@
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
                 } else {
-                    $("head").append('<meta http-equiv="refresh" content="60">');
+                    $("head").append('<meta http-equiv="refresh" content="10">');
                     console.log(inhalt.data.message);
                 }
             }
