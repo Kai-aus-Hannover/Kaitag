@@ -96,6 +96,8 @@ h1 {
   z-index:10;
   box-sizing:border-box;
   float:right;
+  opacity:0;
+  animation:einblenden 0.5s normal forwards;
 }
 .dtube {
   width:115px;
@@ -140,7 +142,7 @@ h1 {
   color:red;
 }
 .fehler {
-  animation:fehler 10s normal forwards 1s;
+  animation:einblenden 10s normal forwards 1s;
   margin:50px auto !important;
   border-radius:50px;
   text-align:center;
@@ -167,7 +169,7 @@ h1 {
   display:block;
   max-height:30cm;
 }
-@keyframes fehler {
+@keyframes einblenden {
   0% {
     opacity:0;
   }
