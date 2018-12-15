@@ -16,7 +16,6 @@
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
                     console.log("angekommen", download);
-                    aufbauen();
                 } else {
                     $("head").append('<meta http-equiv="refresh" content="10">');
                     console.log(inhalt.data.message);
@@ -109,11 +108,16 @@
                     }
                 }                             
             }
+            function checken() {
+                console.log("bisher nicht");
+                download !== null ? aufbauen() : setTimeout(checken, 50);
+            }
             var timer = setTimeout(function() {
                 $("head").append('<meta http-equiv="refresh" content="1">');
             }, 30);
             $(document).ready(function(){
                 clearTimeout(timer);
+                checken();
                 $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
                 $(".bild_sofort_laden").remove();
