@@ -31,6 +31,7 @@
                             var jahr = Number(datum[Z+2].slice(0, 4));
                             var monat = Number(datum[Z+1]);
                             var tag = Number(datum[Z].slice(-2));
+                            var anzahl = 0;
                             switch(A) {
                                 case 1:
                                     ausgabe[jahr] = [];
@@ -39,7 +40,14 @@
                                     ausgabe[jahr][monat] = [];
                                     break;
                                 case 3:
-                                    ausgabe[jahr][monat][tag] = download[i].path;
+                                    ausgabe[jahr][monat][tag] = [];
+                                    break;
+                                case 4:
+                                    while(ausgabe[jahr][monat][tag][anzahl]) {
+                                        console.log("hallo", anzahl);
+                                        anzahl++;
+                                    }
+                                    ausgabe[jahr][monat][tag][anzahl] = download[i].path;
                                     break;
                             } 
                         }
@@ -51,49 +59,57 @@
                 eingabe(2);
                 eingabe(3);
                 for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
-                    if (typeof ausgabe[jahr] === "object") {
-                        for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
-                            if (typeof ausgabe[jahr][monat] === "object") {
-                                for (var tag = ausgabe[jahr][monat].length - 1; tag >= 0; --tag) {
-                                    if (typeof ausgabe[jahr][monat][tag] === "string") {
-                                        var pfad = ausgabe[jahr][monat][tag];
-                                        if (pfad.substring(0, 6) == "Links/") {
-                                            var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
-                                            var i = jahr+"-"+monat+"-"+tag;
-                                            var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
-                                            $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
-                                            (function(i, pfad) {
-                                                zeit += 50;
-                                                setTimeout(function() {
-                                                    $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
-                                                        if (ergebnis == "success") {
-                                                            $("#link-" + i).after('<div class="videos"></div>');
-                                                            var platformen = {};
-                                                            platformen["dtube"] = "DTube";
-                                                            platformen["youtube"] = "YouTube";
-                                                            platformen["dailymotion"] = "dailymotion";
-                                                            platformen["bitchute"] = "BITCHUTE";
-                                                            platformen["bittube"] = "BitTube";
-                                                            console.log("hier");
-                                                            Object.keys(platformen).sort().forEach(function(a) {
-                                                                console.log("plaftorm", platformen[a], a);
-                                                                var video_link = $("#"+i+" ." + a).length ? '<a class="' + a + '" href="' + $("#"+i+" ." + a).attr("href") + '">'+platformen[a]+'</a>' : "";
-                                                                $("#"+i+" ." + a).remove();
-                                                                console.log(video_link);
-                                                                $("#link-" + i + " + .videos").append(video_link);
+                    var JAHR = ausgabe[jahr];
+                    if (typeof JAHR === "object") {
+                        for (var monat = JAHR.length - 1; monat >= 0; --monat) {
+                            var MONAT = JAHR[monat];
+                            if (typeof MONAT === "object") {
+                                for (var tag = MONAT.length - 1; tag >= 0; --tag) {
+                                     var TAG = MONAT[tag];
+                                    if (typeof TAG === "object") {
+                                        for (var anzahl = TAG.length - 1; anzahl >= 0; --anzahl) {
+                                            var ANZAHL = TAG[monat];
+                                            if (typeof ANZAHL === "string") {
+                                                var pfad = ANZAHL;
+                                                if (pfad.substring(0, 6) == "Links/") {
+                                                    var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
+                                                    var i = jahr+"-"+monat+"-"+tag;
+                                                    var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
+                                                    $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
+                                                        (function(i, pfad) {
+                                                        zeit += 50;
+                                                        setTimeout(function() {
+                                                            $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
+                                                                if (ergebnis == "success") {
+                                                                    $("#link-" + i).after('<div class="videos"></div>');
+                                                                    var platformen = {};
+                                                                    platformen["dtube"] = "DTube";
+                                                                    platformen["youtube"] = "YouTube";
+                                                                    platformen["dailymotion"] = "dailymotion";
+                                                                    platformen["bitchute"] = "BITCHUTE";
+                                                                    platformen["bittube"] = "BitTube";
+                                                                    console.log("hier");
+                                                                    Object.keys(platformen).forEach(function(a) {
+                                                                        console.log("plaftorm", platformen[a], a);
+                                                                        var video_link = $("#"+i+" ." + a).length ? '<a class="' + a + '" href="' + $("#"+i+" ." + a).attr("href") + '">'+platformen[a]+'</a>' : "";
+                                                                        $("#"+i+" ." + a).remove();
+                                                                        console.log(video_link);
+                                                                        $("#link-" + i + " + .videos").append(video_link);
+                                                                    });
+                                                                    $("#link-" + i).removeClass("versteckt");
+                                                                    $("#kein_js2").remove();
+                                                                    if ($("#"+i).html().length < 10)
+                                                                        $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
+                                                                    $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
+                                                                } else {
+                                                                    $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
+                                                                    console.log(ergebnis);
+                                                                }
                                                             });
-                                                            $("#link-" + i).removeClass("versteckt");
-                                                            $("#kein_js2").remove();
-                                                            if ($("#"+i).html().length < 10)
-                                                                $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
-                                                            $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
-                                                        } else {
-                                                            $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
-                                                            console.log(ergebnis);
-                                                        }
-                                                    });
-                                                }, zeit);
-                                            })(i, pfad);
+                                                        }, zeit);
+                                                    })(i, pfad);
+                                                }
+                                            }
                                         }
                                     }
                                 }
