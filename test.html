@@ -83,7 +83,7 @@
                                                                     Object.keys(platformen).forEach(function(a) {
                                                                         var video_link = $("#"+i+" ."+a).length ? '<a class="video_links '+a+'" href="'+$("#"+i+" ."+a).attr("href") + '">'+platformen[a]+'</a>' : "";
                                                                         $("#link-"+i).append(video_link);
-                                                                        var a = $("#"+i+" ."+a).removeClass(a).detach();
+                                                                        var a = $("#"+i+" ."+a).removeClass(a).html(platformen[a]).detach();
                                                                         $("#"+i).append(a);
                                                                     });
                                                                     $("#link-"+i).removeClass("versteckt");
