@@ -133,6 +133,7 @@ h1 {
 }
 .bitchute:hover {
   background-color:#eee;
+  color:transparent;
 }
 .bittube {
   width:160px;
@@ -143,6 +144,7 @@ h1 {
 .bittube:hover {
   background-color:white;
   background-image: url(../logo/bittube-hover.jpg);
+  color:transparent;
 }
 .fehler {
   animation:einblenden 10s normal forwards 1s;
