@@ -73,6 +73,7 @@ h1 {
   border-top:2px solid blue;
   opacity:0;
   animation:einblenden 0.5s normal forwards;
+  width:100vw;
 }
 .link_container a {
   height:50px;
