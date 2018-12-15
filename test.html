@@ -74,9 +74,12 @@
                                                             platformen["dailymotion"] = "dailymotion";
                                                             platformen["bitchute"] = "BITCHUTE";
                                                             platformen["bittube"] = "BitTube";
+                                                            console.log("hier");
                                                             Object.keys(platformen).sort().forEach(function(a) {
+                                                                console.log("plaftorm", platformen[a], a);
                                                                 var video_link = $("#"+i+" ." + a).length ? '<a class="' + a + '" href="' + $("#"+i+" ." + a).attr("href") + '">'+platformen[a]+'</a>' : "";
                                                                 $("#"+i+" ." + a).remove();
+                                                                console.log(video_link);
                                                                 $("#link-" + i + " + videos").append(video_link);
                                                             });
                                                             $("#link-" + i).removeClass("versteckt");
