@@ -102,7 +102,11 @@
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
             }
+            var timer = setTimeout(function() {
+                $("head").append('<meta http-equiv="refresh" content="1">');
+            }, 30);
             $(document).ready(function(){
+                clearTimeout(timer);
                 checken();
                 $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
