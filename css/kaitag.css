@@ -84,6 +84,7 @@ a.video_links {
   background-position:center;
 }
 .link {
+  width:auto;
   padding-left:2%;
   background:lavender;
   color:black;
