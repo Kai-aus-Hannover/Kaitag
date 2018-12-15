@@ -168,31 +168,8 @@ h1 {
     opacity:1;
   }
 }
-@media (max-width:850px) {
-  .videos {
-    margin-top:unset;
-    position:relative;
-  }
-  .link  {
-    padding-right:2% !important;
-  }
-  .dtube,
-  .dailymotion,
-  .youtube {
-    width:100%;
-  }
-  .dtube {
-    background-position:left;
-  }
-}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
-  }
-  .link,
-  .dtube,
-  .dailymotion,
-  .youtube {
-    font-size:6vw !important;
   }
 }
