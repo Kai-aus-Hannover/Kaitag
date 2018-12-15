@@ -70,12 +70,13 @@ h1 {
   overflow:hidden;
 }
 .link_container {
-  height:50px;
   border-top:2px solid blue;
   opacity:0;
   animation:einblenden 0.5s normal forwards;
 }
 .link_container a {
+  height:50px;
+  box-sizing:border-box;
   padding:5px 30px;
   font-size:1.5rem;
   box-sizing:border-box;
