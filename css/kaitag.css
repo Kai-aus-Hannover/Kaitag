@@ -129,22 +129,20 @@ h1 {
   width:160px;
   background:#ddd;
   background-image: url(../logo/bitchute.png);
-  color:red;
+  color:transparent;
 }
 .bitchute:hover {
   background:#eee;
-  color:blue;
 }
 .bittube {
   width:160px;
   background-color:#080808;
   background-image: url(../logo/bittube.jpg);
-  color:white;
+  color:transparent;
 }
 .bittube:hover {
   background-color:white;
   background-image: url(../logo/bittube-hover.jpg);
-  color:black;
 }
 .fehler {
   animation:einblenden 10s normal forwards 1s;
