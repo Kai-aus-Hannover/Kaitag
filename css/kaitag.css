@@ -36,11 +36,11 @@ a {
   background:blue;
   color:#eee;
 }
-.link.versteckt {
+.versteckt .link {
   background:#FFFACD;
   color:black;
 }
-.link.versteckt:hover {
+.versteckt .link:hover {
   background:#FFA500;
 }
 .inhalt {
