@@ -74,7 +74,7 @@
                                                         zeit += 50;
                                                         setTimeout(function() {
                                                             var container = "#"+i+" a";
-                                                            console.log("asdasdas", "-----", container, "-----", pfad);
+                                                            console.log("-----", container, "-----", pfad);
                                                             $(container).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                                 if (ergebnis == "success") {
                                                                     var platformen = {};
