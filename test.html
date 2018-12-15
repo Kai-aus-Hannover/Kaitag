@@ -83,8 +83,9 @@
                                                                     Object.keys(platformen).forEach(function(a) {
                                                                         var video_link = $("#"+i+" ."+a).length ? '<a class="video_links '+a+'" href="'+$("#"+i+" ."+a).attr("href") + '">'+platformen[a]+'</a>' : "";
                                                                         $("#link-"+i).append(video_link);
-                                                                        var a = $("#"+i+" ."+a).removeClass(a).html(platformen[a]).addClass("innere_video_links").detach();
-                                                                        $("#"+i).append(a);
+                                                                        $("#"+i+" ."+a).remove();
+                                                                        //var a = $("#"+i+" ."+a).removeClass(a).html(platformen[a]).addClass("innere_video_links").detach();
+                                                                        //$("#"+i).append(a);
                                                                     });
                                                                     $("#link-"+i).removeClass("versteckt");
                                                                     $("#kein_js2").remove();
