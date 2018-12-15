@@ -15,7 +15,6 @@
             function anzeigen(inhalt) {
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
-                    console.log("angekommen", download);
                 } else {
                     $("head").append('<meta http-equiv="refresh" content="10">');
                     console.log(inhalt.data.message);
@@ -74,8 +73,9 @@
                                                         zeit += 50;
                                                         setTimeout(function() {
                                                             var container = "#"+i+" a";
-                                                            console.log("-----", container, "-----", pfad);
-                                                            $(container).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
+                                                            console.log("außen-----", container, "-----", pfad);
+                                                            $("#"+i).load(encodeURIComponent(pfad), function(inhalt, inhalt) {
+                                                                console.log("innen-----", inhalt, "-----", inhalt);
                                                                 if (ergebnis == "success") {
                                                                     var platformen = {};
                                                                     platformen["dtube"] = "DTube";
