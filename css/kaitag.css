@@ -90,7 +90,7 @@ h1 {
 .link {
   width:auto;
   text-align:left !important;
-  padding-left:2%;
+  padding-left:2% !important;
   background:lavender;
   color:black;
 }
