@@ -45,12 +45,12 @@
                                     for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++);
                                     ausgabe[jahr][monat][tag][anzahl] = download[i].path;
                                     break;
-                            } 
+                            }
                         }
                     }
                 }
             }
-            function aufbauen() {           
+            function aufbauen() {
                 eingabe(1);
                 eingabe(2);
                 eingabe(3);
@@ -104,7 +104,7 @@
                             }
                         }
                     }
-                }                             
+                }
             }
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
