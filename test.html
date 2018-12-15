@@ -4,7 +4,7 @@
         <title>Kai aus Hannover Linksammlung</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/kaitag.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
@@ -16,7 +16,7 @@
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
                 } else {
-                    $("head").append('<meta http-equiv="refresh" content="60">');
+                    $("head").append('<meta http-equiv="refresh" content="10">');
                     console.log(inhalt.data.message);
                 }
             }
@@ -63,7 +63,7 @@
                                             var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
                                             $("body").append('<a class="link versteckt collapsed '+typ+'" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
                                             (function(i, pfad) {
-                                                zeit += 1;
+                                                zeit += 50;
                                                 setTimeout(function() {
                                                     $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                         if (ergebnis == "success") {
