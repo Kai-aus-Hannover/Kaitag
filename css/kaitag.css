@@ -134,12 +134,12 @@ h1 {
   background:#eee;
   color:blue;
 }
-.bitube {
+.bittube {
   width:160px;
   background:black;
   color:white;
 }
-.bitube:hover {
+.bittube:hover {
   background:white;
   color:black;
 }
