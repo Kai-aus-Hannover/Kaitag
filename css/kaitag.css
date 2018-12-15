@@ -134,6 +134,15 @@ h1 {
   background:#eee;
   color:blue;
 }
+.bitube {
+  width:160px;
+  background:black;
+  color:white;
+}
+.bitube:hover {
+  background:white;
+  color:black;
+}
 .fehler {
   animation:einblenden 10s normal forwards 1s;
   margin:50px auto !important;
