@@ -112,7 +112,7 @@ h1 {
   font-weight:bold;
 }
 .youtube:hover {
-  background:#eee;
+  background-color:#eee;
   color:red;
 }
 .dailymotion {
@@ -122,7 +122,7 @@ h1 {
   color:#00d2f3;
 }
 .dailymotion:hover {
-  background:#00d2f3;
+  background-color:#00d2f3;
   color:white;
 }
 .bitchute {
@@ -132,7 +132,7 @@ h1 {
   color:transparent;
 }
 .bitchute:hover {
-  background:#eee;
+  background-color:#eee;
 }
 .bittube {
   width:160px;
