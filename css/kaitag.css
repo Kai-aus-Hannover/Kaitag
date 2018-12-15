@@ -1,0 +1,207 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  background:#eee;
+}
+body {
+  background:#eee;
+  padding-bottom:21px; 
+}
+a {
+  width:100%;
+  display:block;
+  text-decoration:none !important;
+  border-top:2px solid blue;
+  transition:0.2s ease;
+}
+.link {
+  padding:5px 2%;
+  background:lavender;
+  color:black;
+  font-size:1.5rem;
+}
+.kaitag-aktuell {
+  /*
+    background: deepskyblue;
+  */
+}
+.kaitag-am-freitag {
+    background: lightblue;
+}
+.nachgedacht-nachgefragt {
+    background: darkorange;
+}
+.link:hover {
+  background:blue;
+  color:#eee;
+}
+.link.versteckt {
+  background:#FFFACD;
+  color:black;
+}
+.link.versteckt:hover {
+  background:#FFA500;
+}
+.inhalt {
+  position:relative;
+}
+.inhalt:visited {
+  background:yellow;
+}
+.inhalt a {
+  padding:5px 4%;
+  background:gold;
+  color:black;
+}
+.inhalt a:hover {
+  background:#606060;
+  color:gold;
+}
+.inhalt a,
+.inhalt .keine_links {
+  border-top:2px solid #eee;
+}
+.keine_links {
+  padding:5px 4%;
+  background:orange;
+  color:black;
+  width:100%;
+  display:block;
+  text-decoration:none !important;
+  border-top:2px solid blue;
+  transition:0.2s ease;
+}
+h1 {
+  text-align:center;
+  padding:10px 20px;
+  font-size:3rem;
+  margin:0 !important;
+  cursor:default;
+}
+.collapse:not(.show) {
+  display:block;
+  height:0;
+  overflow:hidden;
+}
+.videos {
+  position:absolute;
+  z-index:10;
+  margin-top:-47.4px;
+  right:0;
+}
+.videos a {
+  padding:5px 30px;
+  font-size:1.5rem;
+  z-index:10;
+  box-sizing:border-box;
+  float:right;
+  opacity:0;
+  animation:einblenden 0.5s normal forwards;
+}
+.dtube {
+  width:115px;
+  background:white;
+  background-image: url(../logo/dtube.svg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  color:transparent;
+}
+.dtube:hover {
+  background:black;
+  background-image: url(../logo/dtube-hover.svg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  color:transparent;
+}
+.youtube {
+  width:160px;
+  background:red;
+  color:white;
+  font-weight:bold;
+}
+.youtube:hover {
+  background:#eee;
+  color:red;
+}
+.dailymotion {
+  width:200px;
+  font-weight:bold;
+  background:white;
+  color:#00d2f3;
+}
+.dailymotion:hover {
+  background:#00d2f3;
+  color:white;
+}
+.bitchute {
+  width:160px;
+  background:#ddd;
+  color:red;
+}
+.fehler {
+  animation:einblenden 10s normal forwards 1s;
+  margin:50px auto !important;
+  border-radius:50px;
+  text-align:center;
+  max-width:1200px;
+  font-weight:bold;
+  background:red;
+  font-size:3rem;
+  padding:20px;
+  color:white;
+  opacity:0;
+}
+.fehler404 {
+  background:red;
+  color:white;
+  padding:10px 60px;
+  font-size:2rem;
+  font-weight:bold;
+}
+.bild_sofort_laden {
+  width:0;
+}
+#erklärung {
+  margin:0 auto;
+  display:block;
+  max-height:30cm;
+}
+@keyframes einblenden {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@media (max-width:850px) {
+  .videos {
+    margin-top:unset;
+    position:relative;
+  }
+  .link  {
+    padding-right:2% !important;
+  }
+  .dtube,
+  .dailymotion,
+  .youtube {
+    width:100%;
+  }
+  .dtube {
+    background-position:left;
+  }
+}
+@media (max-width:400px) {
+  h1 {
+    font-size:12vw;
+  }
+  .link,
+  .dtube,
+  .dailymotion,
+  .youtube {
+    font-size:6vw !important;
+  }
+}
