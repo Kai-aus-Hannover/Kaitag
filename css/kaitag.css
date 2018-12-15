@@ -169,6 +169,11 @@ h1 {
     opacity:1;
   }
 }
+@media (max-width:700px) {
+  .link {
+    min-width:100%;
+  }
+}
 @media (max-width:400px) {
   h1 {
     font-size:12vw;
