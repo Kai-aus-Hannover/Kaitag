@@ -46,6 +46,7 @@
                                     console.log("jap");
                                     for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++);
                                     ausgabe[jahr][monat][tag][anzahl] = download[i].path;
+                                    console.log("jap2");
                                     break;
                             } 
                         }
@@ -59,21 +60,27 @@
                 eingabe(3);
                 eingabe(4);
                 for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
+                                                    console.log("das1");
                     if (typeof ausgabe[jahr] === "object") {
                         for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
+                                                    console.log("das2");
                             if (typeof ausgabe[jahr][monat] === "object") {
                                 for (var tag = ausgabe[jahr][monat].length - 1; tag >= 0; --tag) {
+                                                    console.log("das3");
                                     if (typeof ausgabe[jahr][monat][tag] === "object") {
                                         for (var anzahl = ausgabe[jahr][monat][tag].length - 1; anzahl >= 0; --anzahl) {
+                                                    console.log("das4");
                                             if (typeof ausgabe[jahr][monat][tag][anzahl] === "string") {
                                                 var pfad = ausgabe[jahr][monat][tag][anzahl];
                                                 if (pfad.substring(0, 6) == "Links/") {
+                                                    console.log("das5");
                                                     var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                                     var i = [jahr, monat, tag, anzahl].join("-");
                                                     var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
                                                     $("body").append('<div class="link_container versteckt" id="link-'+i+'"><a class="link collapsed '+typ+'" "data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear">'+name+'</a><div class="videos"></div></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
                                                         (function(i, pfad) {
                                                         zeit += 50;
+                                                    console.log("das6");
                                                         setTimeout(function() {
                                                             var container = "#"+i+" a";
                                                             console.log("asdasdas", container, pfad);
