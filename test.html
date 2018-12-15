@@ -76,6 +76,7 @@
                                                         zeit += 50;
                                                         setTimeout(function() {
                                                             var container = "#"+i+" a";
+                                                            console.log("asdasdas", container, pfad);
                                                             $(container).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                                 if (ergebnis == "success") {
                                                                     var platformen = {};
@@ -95,7 +96,7 @@
                                                                         $(container).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
                                                                 } else {
                                                                     $(container).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
-                                                                    console.log(ergebnis);
+                                                                    console.log(container, ergebnis);
                                                                 }
                                                             });
                                                         }, zeit);
