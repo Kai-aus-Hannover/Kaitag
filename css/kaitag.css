@@ -128,6 +128,7 @@ h1 {
 .bitchute {
   width:160px;
   background:#ddd;
+  background-image: url(../logo/bitchute.png);
   color:red;
 }
 .bitchute:hover {
@@ -136,11 +137,13 @@ h1 {
 }
 .bittube {
   width:160px;
-  background:black;
+  background-color:#080808;
+  background-image: url(../logo/bittube.jpg);
   color:white;
 }
 .bittube:hover {
-  background:white;
+  background-color:white;
+  background-image: url(../logo/bittube_hover.jpg);
   color:black;
 }
 .fehler {
