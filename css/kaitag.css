@@ -12,25 +12,10 @@ a {
   width:100%;
   display:block;
   text-decoration:none !important;
-  border-top:2px solid blue;
   transition:0.2s ease;
-}
-.link {
-  padding:5px 2%;
-  background:lavender;
-  color:black;
-  font-size:1.5rem;
-}
-.kaitag-aktuell {
-  /*
-    background: deepskyblue;
-  */
 }
 .kaitag-am-freitag {
     background: lightblue;
-}
-.nachgedacht-nachgefragt {
-    background: darkorange;
 }
 .link:hover {
   background:blue;
@@ -84,36 +69,34 @@ h1 {
   height:0;
   overflow:hidden;
 }
-.videos {
-  position:absolute;
-  z-index:10;
-  margin-top:-47.4px;
-  right:0;
-}
-.videos a {
-  padding:5px 30px;
-  font-size:1.5rem;
-  z-index:10;
-  box-sizing:border-box;
-  float:right;
+.link_container {
+  height:50px;
+  border-top:2px solid blue;
   opacity:0;
   animation:einblenden 0.5s normal forwards;
 }
-.dtube {
-  width:115px;
-  background:white;
-  background-image: url(../logo/dtube.svg);
+a.video_links {
+  padding:5px 30px;
+  font-size:1.5rem;
+  box-sizing:border-box;
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
+}
+.link {
+  padding-left:2%;
+  background:lavender;
+  color:black;
+}
+.dtube {
+  width:115px;
+  background-color:white;
+  background-image: url(../logo/dtube.svg);
   color:transparent;
 }
 .dtube:hover {
-  background:black;
+  background-color:black;
   background-image: url(../logo/dtube-hover.svg);
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
   color:transparent;
 }
 .youtube {
