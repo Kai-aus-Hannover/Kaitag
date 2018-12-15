@@ -43,6 +43,7 @@
                                     ausgabe[jahr][monat][tag] = [];
                                     break;
                                 case 4:
+                                    console.log("jap");
                                     for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++);
                                     ausgabe[jahr][monat][tag][anzahl] = download[i].path;
                                     break;
@@ -51,7 +52,8 @@
                     }
                 }
             }
-            function aufbauen() {                     
+            function aufbauen() {
+                console.log("aufbauen start");                  
                 eingabe(1);
                 eingabe(2);
                 eingabe(3);
