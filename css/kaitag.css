@@ -169,7 +169,7 @@ h1 {
     opacity:1;
   }
 }
-@media (max-width:700px) {
+@media (max-width:900px) {
   .link {
     min-width:100%;
   }
