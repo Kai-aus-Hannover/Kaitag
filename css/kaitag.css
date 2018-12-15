@@ -14,9 +14,6 @@ a {
   text-decoration:none !important;
   transition:0.2s ease;
 }
-.kaitag-am-freitag {
-    background: lightblue !important;
-}
 .link:hover {
   background:blue;
   color:#eee;
@@ -159,6 +156,9 @@ h1 {
   margin:0 auto;
   display:block;
   max-height:30cm;
+}
+.kaitag-am-freitag {
+    background: lightblue;
 }
 @keyframes einblenden {
   0% {
