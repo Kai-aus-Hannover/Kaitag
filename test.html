@@ -77,9 +77,9 @@
                                                                     var platformen = {};
                                                                     platformen["bittube"] = "BitTube";
                                                                     platformen["dtube"] = "DTube";
-                                                                    platformen["youtube"] = "YouTube";
-                                                                    platformen["dailymotion"] = "dailymotion";
                                                                     platformen["bitchute"] = "BITCHUTE";
+                                                                    platformen["dailymotion"] = "dailymotion";
+                                                                    platformen["youtube"] = "YouTube";
                                                                     Object.keys(platformen).forEach(function(a) {
                                                                         var video_link = $("#"+i+" ."+a).length ? '<a class="video_links '+a+'" href="'+$("#"+i+" ."+a).attr("href") + '">'+platformen[a]+'</a>' : "";
                                                                         $("#link-"+i).append(video_link);
