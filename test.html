@@ -72,9 +72,7 @@
                                                         (function(i, pfad) {
                                                         zeit += 50;
                                                         setTimeout(function() {
-                                                            console.log("außen-----", "#"+i, "-----", pfad);
-                                                            $("#"+i).load(encodeURIComponent(pfad), function(inhalt, inhalt) {
-                                                                console.log("innen-----", inhalt, "-----", inhalt);
+                                                            $("#"+i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                                 if (ergebnis == "success") {
                                                                     var platformen = {};
                                                                     platformen["dtube"] = "DTube";
