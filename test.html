@@ -31,7 +31,6 @@
                             var jahr = Number(datum[Z+2].slice(0, 4));
                             var monat = Number(datum[Z+1]);
                             var tag = Number(datum[Z].slice(-2));
-                            var anzahl = 0;
                             switch(A) {
                                 case 1:
                                     ausgabe[jahr] = [];
@@ -43,6 +42,8 @@
                                     ausgabe[jahr][monat][tag] = [];
                                     break;
                                 case 4:
+                                    var anzahl = 0;
+                                    console.log("inhalt", ausgabe[jahr][monat][tag][anzahl]);
                                     while(ausgabe[jahr][monat][tag][anzahl]) {
                                         console.log("hallo", anzahl);
                                         anzahl++;
@@ -60,18 +61,14 @@
                 eingabe(3);
                 eingabe(4);
                 for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
-                    var JAHR = ausgabe[jahr];
-                    if (typeof JAHR === "object") {
-                        for (var monat = JAHR.length - 1; monat >= 0; --monat) {
-                            var MONAT = JAHR[monat];
-                            if (typeof MONAT === "object") {
-                                for (var tag = MONAT.length - 1; tag >= 0; --tag) {
-                                    var TAG = MONAT[tag];
-                                    if (typeof TAG === "object") {
-                                        for (var anzahl = TAG.length - 1; anzahl >= 0; --anzahl) {
-                                            var ANZAHL = TAG[monat];
-                                            if (typeof ANZAHL === "string") {
-                                                var pfad = ANZAHL;
+                    if (typeof ausgabe[jahr] === "object") {
+                        for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
+                            if (typeof ausgabe[jahr][monat] === "object") {
+                                for (var tag = ausgabe[jahr][monat].length - 1; tag >= 0; --tag) {
+                                    if (typeof ausgabe[jahr][monat][tag] === "object") {
+                                        for (var anzahl = ausgabe[jahr][monat][tag].length - 1; anzahl >= 0; --anzahl) {
+                                            if (typeof ausgabe[jahr][monat][tag][anzahl] === "string") {
+                                                var pfad = ausgabe[jahr][monat][tag][anzahl];
                                                 if (pfad.substring(0, 6) == "Links/") {
                                                     var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                                     var i = jahr+"-"+monat+"-"+tag;
@@ -89,12 +86,9 @@
                                                                     platformen["dailymotion"] = "dailymotion";
                                                                     platformen["bitchute"] = "BITCHUTE";
                                                                     platformen["bittube"] = "BitTube";
-                                                                    console.log("hier");
                                                                     Object.keys(platformen).forEach(function(a) {
-                                                                        console.log("plaftorm", platformen[a], a);
                                                                         var video_link = $("#"+i+" ." + a).length ? '<a class="' + a + '" href="' + $("#"+i+" ." + a).attr("href") + '">'+platformen[a]+'</a>' : "";
                                                                         $("#"+i+" ." + a).remove();
-                                                                        console.log(video_link);
                                                                         $("#link-" + i + " + .videos").append(video_link);
                                                                     });
                                                                     $("#link-" + i).removeClass("versteckt");
