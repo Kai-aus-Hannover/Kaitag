@@ -42,12 +42,7 @@
                                     ausgabe[jahr][monat][tag] = [];
                                     break;
                                 case 4:
-                                    var anzahl = 0;
-                                    console.log("inhalt", ausgabe[jahr][monat][tag][anzahl]);
-                                    while(ausgabe[jahr][monat][tag][anzahl]) {
-                                        console.log("hallo", anzahl);
-                                        anzahl++;
-                                    }
+                                    for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++);
                                     ausgabe[jahr][monat][tag][anzahl] = download[i].path;
                                     break;
                             } 
