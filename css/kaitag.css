@@ -73,7 +73,8 @@ h1 {
   border-top:2px solid blue;
   opacity:0;
   animation:einblenden 0.5s normal forwards;
-  width:100vw;
+  width:100%;
+  display:flex;
 }
 .link_container a {
   height:50px;
@@ -88,6 +89,7 @@ h1 {
   background-position:center;
 }
 .link {
+  flex:1;
   width:auto;
   text-align:left !important;
   padding-left:2% !important;
