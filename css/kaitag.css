@@ -87,7 +87,7 @@ h1 {
 }
 .link {
   flex:1;
-  width:auto;
+  white-space:nowrap;
   text-align:left !important;
   padding-left:2% !important;
   background:lavender;
