@@ -66,17 +66,15 @@
                                                 var pfad = ausgabe[jahr][monat][tag][anzahl];
                                                 if (pfad.substring(0, 6) == "Links/") {
                                                     var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
-                                                    var i = jahr + "-" + monat + "-" + tag + "-" + anzahl;
-                                                    var i_test = [jahr, monat, tag, anzahl].join("-");
-                                                    console.log("i_test", i_test, "i", i);
+                                                    var i = [jahr, monat, tag, anzahl].join("-");
                                                     var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
-                                                    $("body").append('<a class="link versteckt collapsed ' + typ + '" id="link-' + i + '"data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear">' + name + '</a><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
+                                                    $("body").append('<div class="link_container versteckt" id="link-'+i+'><a class="link collapsed '+typ+'" "data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear">'+name+'</a><div class="videos"></div></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
                                                         (function(i, pfad) {
                                                         zeit += 50;
                                                         setTimeout(function() {
-                                                            $("#" + i).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
+                                                            var container = "#"+i+" a";
+                                                            $(container).load(encodeURIComponent(pfad), function(inhalt, ergebnis) {
                                                                 if (ergebnis == "success") {
-                                                                    $("#link-" + i).after('<div class="videos"></div>');
                                                                     var platformen = {};
                                                                     platformen["dtube"] = "DTube";
                                                                     platformen["youtube"] = "YouTube";
@@ -84,17 +82,17 @@
                                                                     platformen["bitchute"] = "BITCHUTE";
                                                                     platformen["bittube"] = "BitTube";
                                                                     Object.keys(platformen).forEach(function(a) {
-                                                                        var video_link = $("#"+i+" ." + a).length ? '<a class="' + a + '" href="' + $("#"+i+" ." + a).attr("href") + '">'+platformen[a]+'</a>' : "";
-                                                                        $("#"+i+" ." + a).remove();
-                                                                        $("#link-" + i + " + .videos").append(video_link);
+                                                                        var video_link = $(container+" ."+a).length ? '<a class="'+a+'" href="'+$(container+" ."+a).attr("href") + '">'+platformen[a]+'</a>' : "";
+                                                                        $(container+" ." + a).remove();
+                                                                        $("#link-"+i+" + .videos").append(video_link);
                                                                     });
                                                                     $("#link-" + i).removeClass("versteckt");
                                                                     $("#kein_js2").remove();
-                                                                    if ($("#"+i).html().length < 10)
-                                                                        $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
-                                                                    $("#link-"+i).css("padding-right", $("#link-"+i).next().width());
+                                                                    if ($(container).html().length < 10)
+                                                                        $(container).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
+                                                                    //$("#link-"+i).css("padding-right", $("#link-"+i).next().width());
                                                                 } else {
-                                                                    $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
+                                                                    $(container).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
                                                                     console.log(ergebnis);
                                                                 }
                                                             });
