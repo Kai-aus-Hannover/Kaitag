@@ -4,6 +4,9 @@
   box-sizing:border-box;
   background:#eee;
 }
+span {
+    background:transparent;
+}
 body {
   background:#eee;
   padding-bottom:21px; 
