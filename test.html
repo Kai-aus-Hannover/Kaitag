@@ -20,20 +20,10 @@
                     console.log(inhalt.data.message);
                 }
             }
-	    /*
-            function titel_anpassen() {
-                $(".link").each(function() {
-                    while ($(this).height() < $("span", this).height()) {
-			var F = parseFloat($("span", this).css("font-size")) - 0.1;
-			$("span", this).css("font-size", F + "px");
-                    }
-                });
-	    }
-	    */
             function link_anpassen(this_) {
                 while ($(this_).height() < $("span", this_).height()) {
 		    var F = parseFloat($("span", this_).css("font-size")) - 0.1;
-		    if (F < 12) {
+		    if (F < 14) {
 		    	break;
 		    }
 		    $("span", this_).css("font-size", F + "px");
