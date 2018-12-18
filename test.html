@@ -20,6 +20,14 @@
                     console.log(inhalt.data.message);
                 }
             }
+            function titel_anpassen() {
+		        $(".link").each(function() {
+			        while ($(this).height() < $("span", this).height()) {
+				        var F = parseFloat($("span", this).css("font-size")) - 0.1;
+				        $("span", this).css("font-size", F + "px");
+			        }
+		        });
+	        }
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
@@ -68,7 +76,7 @@
                                                     var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                                     var i = [jahr, monat, tag, anzahl].join("-");
                                                     var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
-                                                    $("body").append('<div class="link_container versteckt" id="link-'+i+'"><a class="link collapsed '+typ+'" data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear">'+name+'</a></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
+                                                    $("body").append('<div class="link_container versteckt" id="link-'+i+'"><a class="link collapsed '+typ+'" data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear"><span>'+name+'</span></a></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
                                                         (function(i, pfad) {
                                                         zeit += 50;
                                                         setTimeout(function() {
