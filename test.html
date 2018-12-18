@@ -33,11 +33,15 @@
             function link_anpassen(this_) {
                 while ($(this_).height() < $("span", this_).height()) {
 		    var F = parseFloat($("span", this_).css("font-size")) - 0.1;
+		    if (F < 12) {
+		    	break;
+		    }
 		    $("span", this_).css("font-size", F + "px");
                 }
 	    }
 	    $(window).resize(function(){
                 $(".link").each(function() {
+	            $(this).css("font-size", "1.5rem");
 		    link_anpassen(this);
 		});
 	    });
