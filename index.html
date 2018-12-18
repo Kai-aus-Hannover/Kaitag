@@ -20,6 +20,22 @@
                     console.log(inhalt.data.message);
                 }
             }
+            function link_anpassen(this_) {
+                while ($(this_).height() < $("span", this_).height()) {
+		    var F = parseFloat($("span", this_).css("font-size")) - 0.1;
+		    if (F < 14) {
+		    	break;
+		    }
+		    $("span", this_).css("font-size", F + "px");
+                }
+	    }
+	    function link_resize() {
+                $(".link").each(function() {
+	            $("span", this).css("font-size", "");
+		    link_anpassen(this);
+		});
+	    }
+	    $(window).resize(link_resize);
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
@@ -68,7 +84,7 @@
                                                     var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                                     var i = [jahr, monat, tag, anzahl].join("-");
                                                     var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
-                                                    $("body").append('<div class="link_container versteckt" id="link-'+i+'"><a class="link collapsed '+typ+'" data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear">'+name+'</a></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
+                                                    $("body").append('<div class="link_container versteckt" id="link-'+i+'"><a class="link collapsed '+typ+'" data-toggle="collapse" href="#'+i+'" aria-expanded="false" aria-controls="footwear"><span>'+name+'</span></a></div><div class="inhalt collapse" id="'+i+ '"><div class="fehler404">Noch beim Laden</div></div>');
                                                         (function(i, pfad) {
                                                         zeit += 50;
                                                         setTimeout(function() {
@@ -89,6 +105,7 @@
                                                                     });
                                                                     $("#link-"+i).removeClass("versteckt");
                                                                     $("#kein_js2").remove();
+								    link_anpassen($("#"+i+" .link"));
                                                                     if ($("#"+i).html().length < 10)
                                                                         $("#"+i).html('<div class="keine_links">keine weiteren Links vorhanden</div>');
                                                                 } else {
@@ -107,6 +124,7 @@
                         }
                     }
                 }
+		link_resize();
             }
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
