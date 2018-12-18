@@ -39,12 +39,13 @@
 		    $("span", this_).css("font-size", F + "px");
                 }
 	    }
-	    $(window).resize(function(){
+	    function link_resize() {
                 $(".link").each(function() {
 	            $(this).css("font-size", "1.5rem");
 		    link_anpassen(this);
 		});
-	    });
+	    }
+	    $(window).resize(link_resize);
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
@@ -133,6 +134,7 @@
                         }
                     }
                 }
+		link_resize();
             }
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
