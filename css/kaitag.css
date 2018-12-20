@@ -75,7 +75,6 @@ h1 {
   animation:einblenden 0.5s normal forwards;
   width:100%;
   display:flex;
-  flex-flow:wrap;
 }
 .link_container a {
   height:50px;
@@ -192,6 +191,9 @@ h1 {
 @media (max-width:900px) {
   .link {
     min-width:100%;
+  }
+  .link_container {
+    flex-flow:wrap;
   }
 }
 @media (max-width:400px) {
