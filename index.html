@@ -126,6 +126,8 @@
                 }
 		link_resize();
             }
+	    setTimeout(link_resize, 5000);
+	    setTimeout(link_resize, 10000);
             function checken() {
                 download !== null ? aufbauen() : setTimeout(checken, 50);
             }
