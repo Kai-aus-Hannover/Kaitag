@@ -74,7 +74,7 @@ h1 {
   opacity:0;
   animation:einblenden 0.5s normal forwards;
   width:100%;
-  min-height:50px;
+  height:50px;
   display:flex;
 }
 .link_container a {
