@@ -24,6 +24,7 @@
                 while ($(this_).height() < $("span", this_).height()) {
 		    var F = parseFloat($("span", this_).css("font-size")) - 0.1;
 		    if (F < 14) {
+			$(this_).css("whites-space", "nowrap");
 		    	break;
 		    }
 		    $("span", this_).css("font-size", F + "px");
@@ -31,7 +32,7 @@
 	    }
 	    function link_resize() {
                 $(".link").each(function() {
-	            $("span", this).css("font-size", "");
+	            $("span", this).css({"font-size" : "", "white_space" : "unset"});
 		    link_anpassen(this);
 		});
 	    }
