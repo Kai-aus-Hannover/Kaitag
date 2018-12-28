@@ -195,6 +195,7 @@ h1 {
   }
   .link_container {
     flex-flow:wrap;
+    height:auto;
   }
 }
 @media (max-width:400px) {
