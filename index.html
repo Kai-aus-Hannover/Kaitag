@@ -32,7 +32,8 @@
 	    }
 	    function link_resize() {
                 $(".link").each(function() {
-	            $("span", this).css({"font-size" : "", "white_space" : "unset", "line-height" : "unset"});
+	            $(this).css({"line-height" : "unset"});
+	            $("span", this).css({"font-size" : "", "white_space" : "unset"});
 		    link_anpassen(this);
 		});
 	    }
