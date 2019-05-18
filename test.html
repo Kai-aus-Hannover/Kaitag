@@ -70,7 +70,9 @@
                 }
             }
             function abrufen() {
+                console.log("liste", liste);
                 var video = liste.pop();
+                console.log("video", video);
                 var i = video[0];
                 var pfad = video[1];
                 $("#"+i).load(pfad, function(inhalt, ergebnis) {
