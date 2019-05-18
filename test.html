@@ -31,14 +31,14 @@
 		            $("span", this_).css("font-size", F + "px");
                 }
 	        }
-	    function link_resize() {
-            $(".link").each(function() {
-	            $(this).css({"line-height" : "unset"});
-	            $("span", this).css({"font-size" : "", "white_space" : "unset"});
-		        link_anpassen(this);
-		    });
-	    }
-	    $(window).resize(link_resize);
+	        function link_resize() {
+                $(".link").each(function() {
+	                $(this).css({"line-height" : "unset"});
+	                $("span", this).css({"font-size" : "", "white_space" : "unset"});
+		            link_anpassen(this);
+		        });
+	        }
+	        $(window).resize(link_resize);
             function eingabe(A) {
                 for (var i = download.length - 1; i >= 0; --i) {
                     if (download[i].path.substring(0, 6) == "Links/" && download[i].type == "blob") {
@@ -71,8 +71,11 @@
             }
             function abrufen() {
                 console.log("liste", liste);
-                for(var j = 0; j < liste.length && typeof video == "undefined"; j++) {
+                for(var j = 0; j < liste.length * 2 && typeof video == "undefined"; j++) {
                     var video = liste.pop();
+                }
+                if (typeof video == "undefined") {
+                    return false;
                 }
                 console.log("video", video);
                 var i = video[0];
@@ -101,7 +104,7 @@
                         console.log("#"+i, ergebnis);
                         liste.unshift([i, pfad]);
                     }
-                    abrufen();
+                    setTimeout(abrufen, 1000);
                 });
             }
             function aufbauen() {
