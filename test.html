@@ -61,7 +61,7 @@
                                     ausgabe[jahr][monat][tag] = [];
                                     break;
                                 case 4:
-                                    for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++);
+                                    for (var anzahl = 0; ausgabe[jahr][monat][tag][anzahl]; anzahl++); // ohne {}
                                     ausgabe[jahr][monat][tag][anzahl] = download[i].path;
                                     break;
                             }
@@ -71,7 +71,10 @@
             }
             function abrufen() {
                 console.log("liste", liste);
-                var video = liste.pop();
+                }
+                for(var j = 0; j < liste.length && typeof video == "undefined"; j++) {
+                    var video = liste.pop();
+                }
                 console.log("video", video);
                 var i = video[0];
                 var pfad = video[1];
@@ -103,10 +106,10 @@
                 });
             }
             function aufbauen() {
-                eingabe(1);
-                eingabe(2);
-                eingabe(3);
-                eingabe(4);
+                eingabe(1); // jahr
+                eingabe(2); // monat
+                eingabe(3); // tag
+                eingabe(4); // zwei am Tag
                 for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
                     if (typeof ausgabe[jahr] === "object") {
                         for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
