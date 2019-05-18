@@ -136,7 +136,7 @@
                 }
                 liste = liste.reverse();
                 for (var i = 0; i < max; i++) {
-                    abrufen();
+                    setTimeout(abrufen, i * 50);
                 }
 		        link_resize();
 	            setTimeout(link_resize, 1000);
