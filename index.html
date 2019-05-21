@@ -102,7 +102,7 @@
                         console.log("#"+i, ergebnis);
                         liste.unshift([i, pfad]);
                     }
-                    setTimeout(abrufen, 1000);
+                    setTimeout(abrufen, 100);
                 });
             }
             function aufbauen() {
@@ -136,7 +136,7 @@
                 }
                 liste = liste.reverse();
                 for (var i = 0; i < max; i++) {
-                    setTimeout(abrufen, i * (1000 / max));
+                    abrufen();
                 }
 		        link_resize();
 	            setTimeout(link_resize, 1000);
