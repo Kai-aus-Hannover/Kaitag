@@ -13,6 +13,7 @@
             var ausgabe = [];
             var liste = [];
             var max = 20;
+            var wartezeit = 50;
             function anzeigen(inhalt) {
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
@@ -101,8 +102,9 @@
                         $("#"+i).html('<div class="fehler404">Fehler '+ergebnis+'</div>');
                         console.log("#"+i, ergebnis);
                         liste.unshift([i, pfad]);
+                        wartezeit+= 50;
                     }
-                    abrufen();
+                    setTimeout(abrufen, wartezeit);
                 });
             }
             function aufbauen() {
