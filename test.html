@@ -14,6 +14,11 @@
             var liste = [];
             var max = 20;
             var wartezeit = 10;
+	    var gesperrt_timer = 0;
+            function sperrung() {
+		clearTimer(gesperrt_timer);
+		gesperrt_timer = setTimeout(gesperrt, 500);
+	    }
             function anzeigen(inhalt) {
                 if (inhalt && inhalt.data && typeof inhalt.data.tree === "object") {
                     download = inhalt.data.tree;
@@ -104,7 +109,7 @@
                         liste.unshift([i, pfad]);
                         wartezeit*= 1.05;
                     }
-		    gesperrt();
+                    sperrung();
                     setTimeout(abrufen, wartezeit);
                 });
             }
