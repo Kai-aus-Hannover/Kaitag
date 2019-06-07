@@ -104,6 +104,7 @@
                         liste.unshift([i, pfad]);
                         wartezeit*= 1.05;
                     }
+		    gesperrt();
                     setTimeout(abrufen, wartezeit);
                 });
             }
@@ -157,7 +158,10 @@
                 while(element.length) {
 		    console.log(element);
                     if (element.hasClass("link_container")) {
-                	$(".youtube", element).addClass("gesperrt");
+			var youtube = $(".youtube", element);
+                    	if (!youtube.hasClass("gesperrt")) {
+                	    youtube.addClass("gesperrt");
+			}
                     }
                     element = element.next()
                 }
@@ -168,7 +172,6 @@
                 $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
                 $(".bild_sofort_laden").remove();
-		gesperrt();
             });
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
