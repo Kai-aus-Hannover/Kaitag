@@ -7,28 +7,6 @@
         <link rel="stylesheet" href="css/kaitag.css">
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-	<style>
-	    .dailymotion {
-		position:relative;
-		overflow:hidden;
-	    }
-	    .dailymotion:before {
-		content: "gesperrt";
-		background:rgba(255, 255, 255, 0.6);
-		color:red;
-		position:absolute;
-		top:-50px;
-		left:-45%;
-		width:200%;
-		height:300px;
-		transform:rotateZ(-10deg);
-		padding-top:50px;
-		transition:0.2s ease;
-	    }
-	    .dailymotion:hover:before {
-		transform: rotateZ(-10deg) scale(1.2) translate(2px, 14px);
-	    }
-	</style>
         <script type="text/javascript">
             var $ = jQuery;
             var download = null;
@@ -173,12 +151,23 @@
             var timer = setTimeout(function() {
                 $("head").append('<meta http-equiv="refresh" content="1">');
             }, 30000);
+            function gesperrt() {
+		$(".dailymotion").addClass("gesperrt");
+		var element = $("#link-2019-5-14-0");
+		while(element.next().length) {
+		    element = element.next()
+		    if (element.hasClass("link_container")) {
+			$(".youtube", element).addClass("gesperrt");
+		    }
+		}
+	    }
             $(document).ready(function(){
                 clearTimeout(timer);
                 checken();
                 $("#kein_js1").remove();
                 download == null ? null : $("#kein_js2").remove();
                 $(".bild_sofort_laden").remove();
+		gesperrt();
             });
         </script>
         <script src="https://api.github.com/repos/Kai-aus-Hannover/Kaitag/git/trees/master?recursive=1&callback=anzeigen"></script>
