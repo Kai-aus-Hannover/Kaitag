@@ -150,6 +150,26 @@ h1 {
   background-image: url(../logo/bittube-hover.jpg);
   color:transparent;
 }
+.gesperrt {
+  position:relative;
+  overflow:hidden;
+}
+.gesperrt:before {
+  content: "gesperrt";
+  background:rgba(255, 255, 255, 0.6);
+  color:red;
+  position:absolute;
+  top:-50px;
+  left:-45%;
+  width:200%;
+  height:300px;
+  transform:rotateZ(-10deg);
+  padding-top:50px;
+  transition:0.2s ease;
+}
+.gesperrt:hover:before {
+  transform: rotateZ(-10deg) scale(1.2) translate(2px, 14px);
+}
 .fehler {
   animation:einblenden 10s normal forwards 1s;
   margin:50px auto !important;
