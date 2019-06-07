@@ -16,7 +16,7 @@
             var wartezeit = 10;
 	    var gesperrt_timer = 0;
             function sperrung() {
-		clearTimer(gesperrt_timer);
+		clearTimeout(gesperrt_timer);
 		gesperrt_timer = setTimeout(gesperrt, 500);
 	    }
             function anzeigen(inhalt) {
