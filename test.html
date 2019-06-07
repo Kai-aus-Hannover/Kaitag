@@ -152,14 +152,14 @@
                 $("head").append('<meta http-equiv="refresh" content="1">');
             }, 30000);
             function gesperrt() {
-		$(".dailymotion").addClass("gesperrt");
-		var element = $("#link-2019-5-14-0");
-		while(element.next().length) {
-		    element = element.next()
-		    if (element.hasClass("link_container")) {
-			$(".youtube", element).addClass("gesperrt");
-		    }
-		}
+                $(".dailymotion").addClass("gesperrt");
+                var element = $("#link-2019-5-14-0");
+                while(element.next().length) {
+                    element = element.next()
+                    if (element.hasClass("link_container")) {
+                	$(".youtube", element).addClass("gesperrt");
+                    }
+                }
 	    }
             $(document).ready(function(){
                 clearTimeout(timer);
