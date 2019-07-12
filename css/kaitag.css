@@ -150,6 +150,12 @@ h1 {
   background-image: url(../logo/bittube-hover.jpg);
   color:transparent;
 }
+.telegram {
+    background:#2ea8db;
+    background-image:url(../logo/telegram-logo.svg);
+    background-size:contain;
+    background-position:left center;
+}
 .gesperrt {
   position:relative;
   overflow:hidden;
