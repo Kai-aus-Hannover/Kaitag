@@ -153,8 +153,11 @@ h1 {
 .telegram {
     background:#2ea8db;
     background-image:url(../logo/telegram-logo.svg);
-    background-size:contain;
-    background-position:left center;
+    background-size:80%;
+    background-position:left center !important;
+}
+.telegram:hover {
+    background-image:url(../logo/telegram-logo.svg);
 }
 .gesperrt {
   position:relative;
