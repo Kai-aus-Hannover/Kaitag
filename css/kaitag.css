@@ -201,6 +201,9 @@ h1 {
 .kaitag-am-freitag {
     background: lightblue;
 }
+.halb {
+    width:50%;
+}
 @keyframes einblenden {
   0% {
     opacity:0;
