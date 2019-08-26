@@ -47,6 +47,9 @@ a {
 .inhalt .keine_links {
   border-top:2px solid #eee;
 }
+.inhalt a:empty::after {
+    content: attr(href);
+}
 .keine_links {
   padding:5px 4%;
   background:orange;
