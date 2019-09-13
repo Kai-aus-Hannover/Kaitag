@@ -27,7 +27,7 @@
                 [".dailymotion", "#link-2019-6-4-0"]
             ];
             for(var i = 0, len = blockiert.length; i < len; i++) {
-                var element = blockiert[i][1];
+                var element = $(blockiert[i][1]);
                 while (element.length) {
                     if (element.hasClass("link_container")) {
                         var platform = $(blockiert[i][0], element);
