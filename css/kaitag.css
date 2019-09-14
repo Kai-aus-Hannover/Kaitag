@@ -101,6 +101,9 @@ h1 {
   color:black;
   word-break:break-all;
 }
+.direkt {
+  width:100px;
+}
 .dtube {
   width:115px;
   background-color:white;
