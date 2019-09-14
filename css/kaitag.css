@@ -104,10 +104,11 @@ h1 {
 .direkt {
   width:100px;
   background:#ddd;
-  color:white;
+  color:blue;
 }
 .direkt:hover {
   background:blue;
+  color:white;
 }
 .direkt.gesperrt {
   display:none;
