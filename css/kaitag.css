@@ -103,6 +103,15 @@ h1 {
 }
 .direkt {
   width:100px;
+  background:#aaa;
+  color:blue;
+}
+.direkt:hover {
+  background:blue;
+  color:#aaa;
+}
+.direkt.gesperrt {
+  display:none;
 }
 .dtube {
   width:115px;
