@@ -126,7 +126,8 @@
                         $("#link-" + i).append(video_link);
                         $("#" + i + " ." + a).remove();
                     });
-                    $("#link-" + i).append('<a class="video_links direkt" href="http://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>').removeClass("versteckt");
+                    //$("#link-" + i).append('<a class="video_links direkt" href="http://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>').removeClass("versteckt");
+                    $("#link-" + i).removeClass("versteckt");
                     $("#kein_js2").remove();
                     link_anpassen($("#" + i + " .link"));
                     if ($("#" + i).html().length < 10) {
