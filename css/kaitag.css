@@ -148,6 +148,7 @@ h1 {
   width:160px;
   background:#ccc;
   background-image: url(../logo/bitchute.png);
+  background-size:90% !important;
   color:transparent;
 }
 .bitchute:hover {
