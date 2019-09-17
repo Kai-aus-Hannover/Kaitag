@@ -209,7 +209,7 @@ h1 {
 .bitchute-gesperrt .bitchute:hover:before,
 .dailymotion-gesperrt .dailymotion:hover:before,
 .direkt-gesperrt .direkt:hover:before,
-.dtube-gesperrt .dtube:hover:before, {
+.dtube-gesperrt .dtube:hover:before {
   transform: rotateZ(-10deg) scale(1.2) translate(2px, 14px);
 }
 .fehler {
