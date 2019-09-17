@@ -110,7 +110,7 @@ h1 {
   background:blue;
   color:white;
 }
-.direkt.gesperrt {
+.direkt-gesperrt .direkt {
   display:none;
 }
 .dtube {
