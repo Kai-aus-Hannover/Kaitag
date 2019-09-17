@@ -193,7 +193,7 @@ h1 {
 .direkt-gesperrt .direkt:before,
 .dtube-gesperrt .dtube:before {
   content: "gesperrt";
-  background:rgba(255, 255, 255, 0.6);
+  background:rgba(255, 255, 255, 0.7);
   color:red;
   position:absolute;
   top:-50px;
