@@ -16,28 +16,20 @@
         var liste = [];
         var max = 20;
         var wartezeit = 10;
-        var gesperrt_timer = 0;
-        function sperrung() {
-            clearTimeout(gesperrt_timer);
-            gesperrt_timer = setTimeout(gesperrt, 200);
-        }
-        for (var i = 200; i < 5000; i = i + 200) {
-            setTimeout(gesperrt, i);
-        }
         function gesperrt() {
             var blockiert = [
-                [".youtube", "#link-2019-5-12-0", true],
-                [".dailymotion", "#link-2019-6-4-0", true],
-                [".direkt", "#link-2019-5-8-0", true],
-                [".youtube", "#link-2019-9-13-0", false]
+                ["youtube", "#link-2019-5-12-0", true],
+                ["dailymotion", "#link-2019-6-4-0", true],
+                ["direkt", "#link-2019-5-8-0", true],
+                ["youtube", "#link-2019-9-13-0", false]
             ];
             for(var i = 0, len = blockiert.length; i < len; i++) {
                 var element = $(blockiert[i][1]);
                 while (element.length) {
                     if (element.hasClass("link_container")) {
-                        var platform = $(blockiert[i][0], element);
-                        if (!platform.hasClass("gesperrt")) {
-                            platform.addClass("gesperrt");
+                        var platform = $("." + blockiert[i][0], element);
+                        if (!platform.parent().hasClass(blockiert[i][0] + "-gesperrt")) {
+                            platform.parent().addClass(blockiert[i][0] + "-gesperrt");
                         }
                     }
                     if (blockiert[i][2]) {
@@ -138,7 +130,6 @@
                     liste.unshift([i, pfad]);
                     wartezeit *= 1.05;
                 }
-                sperrung();
                 setTimeout(abrufen, wartezeit);
             });
         }
@@ -175,6 +166,7 @@
             for (var i = 0; i < max; i++) {
                 abrufen();
             }
+            gesperrt();
             link_resize();
             setTimeout(link_resize, 1000);
             setTimeout(link_resize, 5000);
