@@ -111,7 +111,11 @@
                     platformen["dailymotion"] = "dailymotion";
                     platformen["youtube"] = "YouTube";
                     Object.keys(platformen).forEach(function (a) {
-                        var video_link = $("#" + i + " ." + a).length ? '<a class="video_links ' + a + '" href="' + $("#" + i + " ." + a).attr("href") + '">' + platformen[a] + '</a>' : "";
+                        if ($("#" + i + " ." + a).length) {
+                            var video_link = '<a class="video_links ' + a + '" href="' + $("#" + i + " ." + a).attr("href") + '">' + platformen[a] + '</a>';
+                        } else {
+                            var video_link = "";
+                        }
                         $("#link-" + i).append(video_link);
                         $("#" + i + " ." + a).remove();
                     });
