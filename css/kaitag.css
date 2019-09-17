@@ -177,11 +177,21 @@ h1 {
     background-image:url(../logo/telegram.svg);
     background-repeat:no-repeat;
 }
-.gesperrt {
+.youtube-gesperrt .youtube,
+.bittube-gesperrt .bittube,
+.bitchute-gesperrt .bitchute,
+.dailymotion-gesperrt .dailymotion,
+.direkt-gesperrt .direkt,
+.dtube-gesperrt .dtube {
   position:relative;
   overflow:hidden;
 }
-.gesperrt:before {
+.youtube-gesperrt .youtube:before,
+.bittube-gesperrt .bittube:before,
+.bitchute-gesperrt .bitchute:before,
+.dailymotion-gesperrt .dailymotion:before,
+.direkt-gesperrt .direkt:before,
+.dtube-gesperrt .dtube:before {
   content: "gesperrt";
   background:rgba(255, 255, 255, 0.6);
   color:red;
@@ -194,7 +204,12 @@ h1 {
   padding-top:50px;
   transition:0.2s ease;
 }
-.gesperrt:hover:before {
+.youtube-gesperrt .youtube:hover:before,
+.bittube-gesperrt .bittube:hover:before,
+.bitchute-gesperrt .bitchute:hover:before,
+.dailymotion-gesperrt .dailymotion:hover:before,
+.direkt-gesperrt .direkt:hover:before,
+.dtube-gesperrt .dtube:hover:before, {
   transform: rotateZ(-10deg) scale(1.2) translate(2px, 14px);
 }
 .fehler {
