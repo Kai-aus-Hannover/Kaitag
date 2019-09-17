@@ -26,11 +26,8 @@
             for(var i = 0, len = blockiert.length; i < len; i++) {
                 var element = $(blockiert[i][1]);
                 while (element.length) {
-                    if (element.hasClass("link_container")) {
-                        var platform = $("." + blockiert[i][0], element);
-                        if (!platform.parent().hasClass(blockiert[i][0] + "-gesperrt")) {
-                            platform.parent().addClass(blockiert[i][0] + "-gesperrt");
-                        }
+                    if (element.hasClass("link_container") && !element.hasClass(blockiert[i][0] + "-gesperrt")) {
+                        element.addClass(blockiert[i][0] + "-gesperrt");
                     }
                     if (blockiert[i][2]) {
                         element = element.next();
