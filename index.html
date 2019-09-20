@@ -120,6 +120,7 @@
                         $("#link-" + i).append(video_link);
                         $("#" + i + " ." + a).remove();
                     });
+                    $("#link-" + i).append($("#link-" + i + " .direkt").detach()); // auf die rechte Seite verschieben
                     $("#link-" + i).removeClass("versteckt");
                     $("#kein_js2").remove();
                     link_anpassen($("#" + i + " .link"));
