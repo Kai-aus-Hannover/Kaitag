@@ -55,12 +55,16 @@
                 $("span", this_).css("font-size", F + "px");
             }
         }
+        var resize_timer = 0;
         function link_resize() {
-            $(".link").each(function () {
-                $(this).css({ "line-height": "unset" });
-                $("span", this).css({ "font-size": "", "white_space": "unset" });
-                link_anpassen(this);
-            });
+            clearTimeout(resize_timer);
+            resize_timer = setTimeout(function() {
+                $(".link").each(function () {
+                    $(this).css({ "line-height": "unset" });
+                    $("span", this).css({ "font-size": "", "white_space": "unset" });
+                    link_anpassen(this);
+                });
+            }, 100);
         }
         $(window).resize(link_resize);
         function eingabe(A) {
