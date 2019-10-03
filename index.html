@@ -106,7 +106,9 @@
             }
             var i = video[0];
             var pfad = video[1];
-            $("#link-" + i).append('<a class="video_links direkt" href="http://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>');
+            if ($("#link-" + i + " .video_links.direkt").length == 0) {
+                $("#link-" + i).append('<a class="video_links direkt" href="http://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>');
+            }
             $("#" + i).load(pfad, function (inhalt, ergebnis) {
                 if (ergebnis == "success") {
                     var platformen = {};
