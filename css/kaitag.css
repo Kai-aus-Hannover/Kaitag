@@ -246,6 +246,9 @@ h1 {
 .halb {
     width:50%;
 }
+.drittel {
+    width:33.3%;
+}
 @keyframes einblenden {
   0% {
     opacity:0;
