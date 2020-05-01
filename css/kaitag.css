@@ -166,8 +166,11 @@ h1 {
   background-image: url(../logo/bittube-hover.jpg);
   color:transparent;
 }
-.telegram {
+.versicherung,
+.telergam {
     border-left: 2px solid blue;
+}
+.telegram {
     background-image:url(../logo/telegram.svg);
     background-size:40px 40px !important;
     background-position:5px center !important;
