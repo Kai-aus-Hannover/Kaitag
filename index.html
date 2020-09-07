@@ -110,7 +110,7 @@
             var i = video[0];
             var pfad = video[1];
             if ($("#link-" + i + " .video_links.direkt").length == 0) {
-                $("#link-" + i).append('<a class="video_links direkt" href="http://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>');
+                $("#link-" + i).append('<a class="video_links direkt" href="https://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>');
             }
             $("#" + i).load(pfad, function (inhalt, ergebnis) {
                 if (ergebnis == "success") {
@@ -149,7 +149,7 @@
             eingabe(1); // jahr
             eingabe(2); // monat
             eingabe(3); // tag
-            eingabe(4); // zwei am Tag
+            eingabe(4); // mehrere am Tag
             for (var jahr = ausgabe.length - 1; jahr >= 0; --jahr) {
                 if (typeof ausgabe[jahr] === "object") {
                     for (var monat = ausgabe[jahr].length - 1; monat >= 0; --monat) {
