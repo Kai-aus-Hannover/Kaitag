@@ -124,6 +124,16 @@ h1 {
   background-image: url(../logo/dtube-hover.svg);
   color:transparent;
 }
+.donnersender {
+  width:160px;
+  background:red;
+  color:white;
+  font-weight:bold;
+}
+.donnersender:hover {
+  background-color:#eee;
+  color:red;
+}
 .youtube {
   width:160px;
   background:red;
@@ -180,6 +190,7 @@ h1 {
     background-image:url(../logo/telegram.svg);
     background-repeat:no-repeat;
 }
+.donnersender-gesperrt .donnersender,
 .youtube-gesperrt .youtube,
 .bittube-gesperrt .bittube,
 .bitchute-gesperrt .bitchute,
@@ -189,6 +200,7 @@ h1 {
   position:relative;
   overflow:hidden;
 }
+.donnersender-gesperrt .donnersender:before,
 .youtube-gesperrt .youtube:before,
 .bittube-gesperrt .bittube:before,
 .bitchute-gesperrt .bitchute:before,
@@ -207,6 +219,7 @@ h1 {
   padding-top:50px;
   transition:0.2s ease;
 }
+.donnersender-gesperrt .donnersender:hover:before,
 .youtube-gesperrt .youtube:hover:before,
 .bittube-gesperrt .bittube:hover:before,
 .bitchute-gesperrt .bitchute:hover:before,
