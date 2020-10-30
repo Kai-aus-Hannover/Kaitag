@@ -126,7 +126,7 @@ h1 {
 }
 .donnersender {
   width:180px;
-  background:linear-gradiant(#484e55,#3a3f44 60%,#313539);
+  background:linear-gradient(#888, #444);
   color:white;
   font-weight:bold;
 }
