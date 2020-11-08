@@ -120,9 +120,9 @@ h1 {
   color:transparent;
 }
 .dtube:hover {
-  background-color:black;
-  background-image: url(../logo/dtube-hover.svg);
-  color:transparent;
+  background-color:black !important;
+  background-image: url(../logo/dtube-hover.svg) !important;
+  color:transparent !important;
 }
 .donnersender {
   width:180px;
@@ -131,8 +131,8 @@ h1 {
   font-weight:bold;
 }
 .donnersender:hover {
-  background-color:#eee;
-  color:red;
+  background-color:#eee !important;
+  color:red !important;
 }
 .youtube {
   width:160px;
@@ -141,7 +141,7 @@ h1 {
   font-weight:bold;
 }
 .youtube:hover {
-  background-color:#eee;
+  background-color:#eee !important;
   color:red !important;
 }
 .dailymotion {
@@ -151,8 +151,8 @@ h1 {
   color:#00d2f3;
 }
 .dailymotion:hover {
-  background-color:#00d2f3;
-  color:white !important;
+  background-color:#00d2f3 !important;
+  color:white !important !important;
 }
 .bitchute {
   width:160px;
@@ -162,8 +162,8 @@ h1 {
   color:transparent;
 }
 .bitchute:hover {
-  background-color:#eee;
-  color:transparent !important;
+  background-color:#eee !important;
+  color:transparent !important !important;
 }
 .bittube {
   width:160px;
@@ -172,9 +172,9 @@ h1 {
   color:transparent;
 }
 .bittube:hover {
-  background-color:white;
-  background-image: url(../logo/bittube-hover.jpg);
-  color:transparent;
+  background-color:white !important;
+  background-image: url(../logo/bittube-hover.jpg) !important;
+  color:transparent !important;
 }
 #link-kaitag-verteiler {
   border-bottom:5px solid blue;
@@ -200,7 +200,9 @@ h1 {
 #link-kaitag-verteiler a:first-child span {
   margin:0;
 }
-#link-kaitag-verteiler a.telegram,
+#link-kaitag-verteiler a.telegram {
+  padding-left:45px !important;
+}
 #link-kaitag-verteiler a:first-child {
   padding-left:2% !important;
 }
