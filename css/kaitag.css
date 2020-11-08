@@ -179,7 +179,7 @@ h1 {
 #link-kaitag-verteiler a {
   padding-left:10px;
   padding-right:10px;
-  max-width:10vw;
+  max-width:calc(100vw / 9);
 }
 #link-kaitag-verteiler a span {
   margin:0 auto;
