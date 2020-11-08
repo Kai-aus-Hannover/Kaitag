@@ -181,6 +181,10 @@ h1 {
   padding-right:10px;
   max-width:10vw;
 }
+#link-kaitag-verteiler a span {
+  margin:0 auto;
+  display:block;
+}
 #link-kaitag-verteiler a,
 .versicherung,
 .telegram {
@@ -188,6 +192,9 @@ h1 {
 }
 #link-kaitag-verteiler a:first-child {
   border-left:none;
+}
+#link-kaitag-verteiler a:first-child span {
+  margin:0;
 }
 .telegram,
 #link-kaitag-verteiler a:first-child {
