@@ -177,13 +177,14 @@ h1 {
   color:transparent;
 }
 #link-kaitag-verteiler a {
-  padding-left:10px;
+  padding-left:10px !important;
   padding-right:10px;
   max-width:calc(100vw / 9);
 }
 #link-kaitag-verteiler a span {
   margin:0 auto;
   display:block;
+  text-align:center;
 }
 #link-kaitag-verteiler a,
 .versicherung,
