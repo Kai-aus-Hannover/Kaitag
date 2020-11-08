@@ -178,6 +178,7 @@ h1 {
 }
 #link-kaitag-verteiler a {
   padding-right:10px;
+  max-width:10vw;
 }
 #link-kaitag-verteiler a,
 .versicherung,
