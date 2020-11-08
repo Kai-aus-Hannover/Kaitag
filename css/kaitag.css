@@ -18,7 +18,7 @@ a {
   transition:0.2s ease;
 }
 .link:hover {
-  background:blue;
+  background-color:blue;
   color:#eee !important;
 }
 .versteckt .link {
@@ -177,7 +177,8 @@ h1 {
   color:transparent !important;
 }
 #link-kaitag-verteiler {
-  border-bottom:5px solid blue;
+  border-bottom:10px solid blue;
+  box-sizing:content-box;
 }
 #link-kaitag-verteiler a {
   padding-left:10px !important;
@@ -292,9 +293,11 @@ h1 {
 .drittel {
     width:33.3%;
 }
+/*
 #link-kaitag-verteiler a {
   line-height:unset;
 }
+*/
 @keyframes einblenden {
   0% {
     opacity:0;
