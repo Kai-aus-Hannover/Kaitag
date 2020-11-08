@@ -266,6 +266,9 @@ h1 {
 .drittel {
     width:33.3%;
 }
+#link-kaitag-verteiler a {
+  line-height:unset;
+}
 @keyframes einblenden {
   0% {
     opacity:0;
