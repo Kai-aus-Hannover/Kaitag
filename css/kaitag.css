@@ -176,6 +176,9 @@ h1 {
   background-image: url(../logo/bittube-hover.jpg);
   color:transparent;
 }
+#link-kaitag-verteiler a {
+  padding-right:10px;
+}
 #link-kaitag-verteiler a,
 .versicherung,
 .telegram {
