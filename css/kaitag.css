@@ -142,7 +142,7 @@ h1 {
 }
 .youtube:hover {
   background-color:#eee;
-  color:red;
+  color:red !important;
 }
 .dailymotion {
   width:200px;
@@ -152,7 +152,7 @@ h1 {
 }
 .dailymotion:hover {
   background-color:#00d2f3;
-  color:white;
+  color:white !important;
 }
 .bitchute {
   width:160px;
@@ -163,7 +163,7 @@ h1 {
 }
 .bitchute:hover {
   background-color:#eee;
-  color:transparent;
+  color:transparent !important;
 }
 .bittube {
   width:160px;
@@ -182,7 +182,7 @@ h1 {
 #link-kaitag-verteiler a {
   padding-left:10px !important;
   padding-right:10px;
-  max-width:calc(100vw / 9);
+  max-width:calc(100vw / 10);
 }
 #link-kaitag-verteiler a span {
   margin:0 auto;
