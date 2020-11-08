@@ -176,6 +176,9 @@ h1 {
   background-image: url(../logo/bittube-hover.jpg);
   color:transparent;
 }
+#link-kaitag-verteiler {
+  border-bottom:5px solid blue;
+}
 #link-kaitag-verteiler a {
   padding-left:10px !important;
   padding-right:10px;
@@ -197,7 +200,7 @@ h1 {
 #link-kaitag-verteiler a:first-child span {
   margin:0;
 }
-.telegram,
+#link-kaitag-verteiler a.telegram,
 #link-kaitag-verteiler a:first-child {
   padding-left:2% !important;
 }
