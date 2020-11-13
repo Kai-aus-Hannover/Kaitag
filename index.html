@@ -62,11 +62,21 @@
         function link_resize() {
             clearTimeout(resize_timer);
             resize_timer = setTimeout(function() {
+                const = [".link", "#link-kaitag-verteiler a"];
+                for (var i = 0; i < elemente.length; i++) {
+                    $(elemente[i]).each(function () {
+                        $(this).css({ "line-height": "unset" });
+                        $("span", this).css({ "font-size": "", "white_space": "unset" });
+                        link_anpassen(this);
+                    });
+                }
+                /*
                 $(".link").each(function () {
                     $(this).css({ "line-height": "unset" });
                     $("span", this).css({ "font-size": "", "white_space": "unset" });
                     link_anpassen(this);
                 });
+                */
             }, 500);
         }
         $(window).resize(link_resize);
