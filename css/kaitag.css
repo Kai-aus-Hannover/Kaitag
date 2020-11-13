@@ -20,14 +20,12 @@ a {
 #ganz_oben {
   width:100%;
 }
-#ganz_oben a {
+#ganz_oben > * {
   color:black;
   background:white;
-  position:absolute;
-  z-index:2;
-  top:0;
   height:72.8px;
   width:auto;
+  height:100%;
   padding:23px 10px;
 }
 #ganz_oben a:hover {
@@ -35,11 +33,9 @@ a {
   color:white;
 }
 #ganz_oben a:first-child {
-  left:0;
   border-right:2px solid blue;
 }
 #ganz_oben a:last-child {
-  right:0;
   border-left:2px solid blue;
 }
 .link:hover {
