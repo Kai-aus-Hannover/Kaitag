@@ -62,7 +62,7 @@
         function link_resize() {
             clearTimeout(resize_timer);
             resize_timer = setTimeout(function() {
-                const = [".link", "#link-kaitag-verteiler a"];
+                const elemente = [".link", "#link-kaitag-verteiler a"];
                 for (var i = 0; i < elemente.length; i++) {
                     $(elemente[i]).each(function () {
                         $(this).css({ "line-height": "unset" });
