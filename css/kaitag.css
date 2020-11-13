@@ -23,11 +23,17 @@ a {
   justify-content:space-between;
 }
 #ganz_oben > * {
+  height:100px;
+}
+#ganz_oben > a {
   color:black;
   background:white;
   width:auto;
-  height:100%;
   padding:23px 10px;
+  width:300px;
+}
+#ganz_oben h1 {
+  width:calc(100vw - 600px);
 }
 #ganz_oben a:hover {
   background:blue;
