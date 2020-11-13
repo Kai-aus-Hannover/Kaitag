@@ -94,8 +94,11 @@ h1 {
   background-size:contain;
   background-position:center;
 }
-#link-kaitag-verteiler a {
-  background:white;
+#link-kaitag-verteiler .telegram {
+  color:black;
+}
+#link-kaitag-verteiler .ohne {
+  background:lavender;
   color:black;
 }
 .link_container .bitchute {
