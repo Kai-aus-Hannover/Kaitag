@@ -17,6 +17,17 @@ a {
   text-decoration:none !important;
   transition:0.2s ease;
 }
+#ganz_oben a {
+  position:absolute;
+  z-index:2;
+  top:0;
+}
+#ganz_oben a:first-child {
+  left:0;
+}
+#ganz_oben a:last-child {
+  right:0;
+}
 .link:hover {
   background-color:blue;
   color:#eee !important;
