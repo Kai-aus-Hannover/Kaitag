@@ -30,6 +30,10 @@ a {
   width:auto;
   padding:23px 10px;
 }
+#ganz_oben a:hover {
+  background:blue;
+  color:white;
+}
 #ganz_oben a:first-child {
   left:0;
   border-right:2px solid blue;
