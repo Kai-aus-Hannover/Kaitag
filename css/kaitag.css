@@ -17,16 +17,24 @@ a {
   text-decoration:none !important;
   transition:0.2s ease;
 }
+#ganz_oben {
+  width:100%;
+}
 #ganz_oben a {
+  color:black;
+  background:white;
   position:absolute;
   z-index:2;
   top:0;
+  height:72.8px;
 }
 #ganz_oben a:first-child {
   left:0;
+  border-right:2px solid blue;
 }
 #ganz_oben a:last-child {
   right:0;
+  border-left:2px solid blue;
 }
 .link:hover {
   background-color:blue;
@@ -217,7 +225,7 @@ h1 {
 #link-kaitag-verteiler a {
   padding-left:10px !important;
   padding-right:10px;
-  max-width:calc(100vw / 10);
+  width:calc(100vw / 9);
 }
 #link-kaitag-verteiler a span {
   margin:0 auto;
