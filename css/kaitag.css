@@ -27,6 +27,8 @@ a {
   z-index:2;
   top:0;
   height:72.8px;
+  width:auto;
+  padding:23px 10px;
 }
 #ganz_oben a:first-child {
   left:0;
