@@ -83,8 +83,6 @@ h1 {
   justify-content:space-between;
 }
 .link_container a {
-  background:white;
-  color:black;
   height:100%;
   box-sizing:border-box;
   padding:5px 30px;
@@ -95,6 +93,10 @@ h1 {
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
+}
+#link-kaitag-verteiler a {
+  background:white;
+  color:black;
 }
 .link_container .bitchute {
   min-width:150px;
@@ -180,7 +182,7 @@ h1 {
   color:transparent;
 }
 .frei3:hover {
-  background-color:#eee !important;
+  background-color:#777 !important;
   color:transparent !important;
 }
 .bittube {
