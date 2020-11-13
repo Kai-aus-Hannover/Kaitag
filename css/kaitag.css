@@ -19,11 +19,12 @@ a {
 }
 #ganz_oben {
   width:100%;
+  display:flex;
+  justify-content:space-between;
 }
 #ganz_oben > * {
   color:black;
   background:white;
-  height:72.8px;
   width:auto;
   height:100%;
   padding:23px 10px;
