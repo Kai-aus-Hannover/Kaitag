@@ -78,9 +78,13 @@ h1 {
   animation:einblenden 0.5s normal forwards;
   width:100%;
   height:50px;
+  background:blue;
   display:flex;
+  justify-content:space-between;
 }
 .link_container a {
+  background:white;
+  color:black;
   height:100%;
   box-sizing:border-box;
   padding:5px 30px;
@@ -91,6 +95,9 @@ h1 {
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
+}
+.link_container .bitchute {
+  min-width:150px;
 }
 .link {
   flex:1;
@@ -162,6 +169,17 @@ h1 {
   color:transparent;
 }
 .bitchute:hover {
+  background-color:#eee !important;
+  color:transparent !important;
+}
+.frei3 {
+  width:160px;
+  background:#ccc;
+  background-image: url(../logo/frei3.png);
+  background-size:90% !important;
+  color:transparent;
+}
+.frei3:hover {
   background-color:#eee !important;
   color:transparent !important;
 }
