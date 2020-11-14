@@ -44,6 +44,7 @@ a {
 }
 #ganz_oben a:last-child {
   border-left:2px solid blue;
+  text-align:right;
 }
 .link:hover {
   background-color:blue;
