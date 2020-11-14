@@ -259,6 +259,10 @@ h1 {
 #link-kaitag-verteiler a:first-child {
     padding-left:2% !important;
 }
+#link-kaitag-verteiler .frei3,
+#link-kaitag-verteiler .bitchute {
+  background-size:contain !important;
+}
 .telegram {
     background-color:#00BFFF;
     background-image:url(../logo/telegram.svg);
