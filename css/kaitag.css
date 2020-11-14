@@ -368,6 +368,10 @@ h1 {
     flex-flow:wrap;
     height:auto;
   }
+  #link-kaitag-verteiler a {
+    min-width:200px;
+    height:50px;
+  }
 }
 @media (max-width:400px) {
   h1 {
