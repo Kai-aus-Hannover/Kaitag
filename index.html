@@ -152,7 +152,7 @@
                     $("#" + i).html('<div class="fehler404">Fehler ' + ergebnis + '</div>');
                     console.log("#" + i, ergebnis);
                     liste.unshift([i, pfad]);
-                    wartezeit *= 1.05;
+                    wartezeit += 50;
                 }
                 setTimeout(abrufen, wartezeit);
             });
