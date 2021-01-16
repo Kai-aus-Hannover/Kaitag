@@ -142,17 +142,23 @@ h1 {
   color:black;
   word-break:break-all;
 }
+.podcast,
 .direkt {
   width:150px;
   background:#ddd;
   color:blue;
 }
+.podcast:hover,
 .direkt:hover {
   background:blue;
   color:white;
 }
+.podcast-gesperrt .podcast,
 .direkt-gesperrt .direkt {
   display:none;
+}
+.podcast {
+  border-left:1px solid blue;
 }
 .dtube {
   width:115px;
@@ -280,6 +286,7 @@ h1 {
 .bittube-gesperrt .bittube,
 .bitchute-gesperrt .bitchute,
 .dailymotion-gesperrt .dailymotion,
+.podcast-gesperrt .podcast,
 .direkt-gesperrt .direkt,
 .dtube-gesperrt .dtube {
   position:relative;
@@ -290,6 +297,7 @@ h1 {
 .bittube-gesperrt .bittube:before,
 .bitchute-gesperrt .bitchute:before,
 .dailymotion-gesperrt .dailymotion:before,
+.podcast-gesperrt .podcast:before,
 .direkt-gesperrt .direkt:before,
 .dtube-gesperrt .dtube:before {
   content: "gesperrt";
@@ -309,6 +317,7 @@ h1 {
 .bittube-gesperrt .bittube:hover:before,
 .bitchute-gesperrt .bitchute:hover:before,
 .dailymotion-gesperrt .dailymotion:hover:before,
+.podcast-gesperrt .podcast:hover:before,
 .direkt-gesperrt .direkt:hover:before,
 .dtube-gesperrt .dtube:hover:before {
   transform: rotateZ(-10deg) scale(1.2) translate(2px, 14px);
