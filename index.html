@@ -21,7 +21,7 @@
                 ["youtube", "#link-2019-5-12-0", true],
                 ["dailymotion", "#link-2019-6-4-0", true],
                 ["direkt", "#link-2019-5-8-0", true],
-                ["podcast", "#link-2021-15-1-0", true],
+                ["podcast", "#link-2021-1-15-0", true],
                 ["youtube", "#link-2019-9-13-0", false],
                 ["youtube", "#link-2019-10-11-0", false],
                 ["youtube", "#link-2019-12-20-0", false],
@@ -123,9 +123,9 @@
             if ($("#link-" + i + " .video_links.direkt").length == 0) {
                 $("#link-" + i).append('<a class="video_links direkt" href="https://video.kai-aus-hannover.de/?v=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Direktserver</a>');
             }
-            //if ($("#link-" + i + " .video_links.podcast").length == 0) {
-            //    $("#link-" + i).append('<a class="video_links podcast" href="https://video.kai-aus-hannover.de/?a=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Podcast</a>');
-            //}
+            if ($("#link-" + i + " .video_links.podcast").length == 0) {
+                $("#link-" + i).append('<a class="video_links podcast" href="https://video.kai-aus-hannover.de/?a=' + encodeURIComponent($("#link-" + i + " span").text()) + '">Podcast</a>');
+            }
             $("#" + i).load(pfad, function (inhalt, ergebnis) {
                 if (ergebnis == "success") {
                     var platformen = {};
@@ -145,7 +145,8 @@
                         $("#link-" + i).append(video_link);
                         $("#" + i + " ." + a).remove();
                     });
-                    $("#link-" + i).append($("#link-" + i + " .direkt").detach()); // auf die rechte Seite verschieben
+                    $("#link-" + i).append($("#link-" + i + " .direkt" ).detach()); // auf die rechte Seite verschieben
+                    $("#link-" + i).append($("#link-" + i + " .podcast").detach()); // auf die rechte Seite verschieben
                     $("#link-" + i).removeClass("versteckt");
                     $("#kein_js2").remove();
                     link_anpassen($("#" + i + " .link"));
