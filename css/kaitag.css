@@ -144,9 +144,14 @@ h1 {
 }
 .podcast,
 .direkt {
+  /*
   width:150px;
+  */
   background:#ddd;
   color:blue;
+  flex:0;
+  padding-left:10px !important;
+  padding-right:10px !important;
 }
 .podcast:hover,
 .direkt:hover {
