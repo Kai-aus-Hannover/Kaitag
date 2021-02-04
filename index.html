@@ -214,8 +214,8 @@
             var screenshot = false;
             if (navigator.userAgent.includes("HeadlessChrome")) {
                 screenshot = true;
-                limit = 200;
-                max = 10;
+                limit = 35;
+                max = 100;
                 wartezeit = 1;
             }
             clearTimeout(timer);
@@ -226,13 +226,6 @@
             if (screenshot) {
                 $("#ganz_oben *").css("pointer-events", "none");
                 $("*").addClass("notransition");
-                for(let i = 0; i < 1000; i = i + 10) {
-                    setTimeout(function() {
-                        $.ajax({
-                            url: "/NICHTS"
-                        });
-                    }, i);
-                }
             }
         });
     </script>
