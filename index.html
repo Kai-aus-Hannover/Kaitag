@@ -209,7 +209,7 @@
         }, 30000);
         $(document).ready(function () {
             console.log("---------HIER 2--------------", navigator.userAgent.toString()); // debug
-            $("#ganz_oben a span").text(navigator.userAgent.toString()); // debug
+            $(".link_container").text(navigator.userAgent.toString()); // debug
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
