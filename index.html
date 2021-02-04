@@ -211,7 +211,7 @@
             console.log("ist auf unbind");
             if (navigator.userAgent.includes("HeadlessChrome")) {
                 //$("#ganz_oben h1").css("background", "red");
-                $("#ganz_oben *").unbind()
+                $("#ganz_oben *").css("pointer-events", "none");
             }
             clearTimeout(timer);
             checken();
