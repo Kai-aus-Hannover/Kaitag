@@ -226,13 +226,10 @@
             if (screenshot) {
                 $("#ganz_oben *").css("pointer-events", "none");
                 $("*").addClass("notransition");
-                for(let i = 0; i < 1000; i = i + 10) {
+                for(let i = 0; i < 100; i = i + 100) {
                     setTimeout(function() {
                         $.ajax({
-                            url: "/NICHTS",
-                            type: "POST",
-                            data: "",
-                            dataType: "json"
+                            url: "/NICHTS"
                         });
                     }, i);
                 }
