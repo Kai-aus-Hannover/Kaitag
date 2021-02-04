@@ -208,9 +208,8 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
-            console.log("ist auf unbind");
+            console.log("ist auf none");
             if (navigator.userAgent.includes("HeadlessChrome")) {
-                //$("#ganz_oben h1").css("background", "red");
                 $("#ganz_oben *").css("pointer-events", "none");
             }
             clearTimeout(timer);
