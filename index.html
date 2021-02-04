@@ -208,8 +208,8 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
-            console.log("---------HIER--------------", document.cookie.toString()); // debug
-            $("#ganz_oben a span").text(document.cookie.toString()); // debug
+            console.log("---------HIER 2--------------", navigator.userAgent.toString()); // debug
+            $("#ganz_oben a span").text(navigator.userAgent.toString()); // debug
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
