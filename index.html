@@ -208,15 +208,15 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
-            if (navigator.userAgent.includes("HeadlessChrome")) {
-                $("#ganz_oben *").css("pointer-events", "none");
-            }
-            $("*").addClass("notransition");
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
             download == null ? null : $("#kein_js2").remove();
             $(".bild_sofort_laden").remove();
+            if (navigator.userAgent.includes("HeadlessChrome")) {
+                $("#ganz_oben *").css("pointer-events", "none");
+            }
+            $("*").addClass("notransition");
         });
     </script>
     <script
