@@ -211,7 +211,7 @@
             if (navigator.userAgent.includes("HeadlessChrome")) {
                 $("#ganz_oben *").css("pointer-events", "none");
             }
-            $("*").css("transition", "0s !important");
+            $("*").addClass("notransition");
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
