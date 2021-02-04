@@ -16,6 +16,7 @@
         var liste = [];
         var max = 20;
         var wartezeit = 50;
+        var limit = Number.POSITIVE_INFINITY;
         function gesperrt() {
             var blockiert = [
                 ["youtube", "#link-2019-5-12-0", true],
@@ -208,15 +209,22 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
+            var screenshot = false;
+            if (navigator.userAgent.includes("HeadlessChrome")) {
+                screenshot = true;
+                limit = 20;
+                max = 10;
+                wartezeit = 0;
+            }
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
             download == null ? null : $("#kein_js2").remove();
             $(".bild_sofort_laden").remove();
-            if (navigator.userAgent.includes("HeadlessChrome")) {
+            if (screenshot) {
                 $("#ganz_oben *").css("pointer-events", "none");
+                $("*").addClass("notransition");
             }
-            $("*").addClass("notransition");
         });
     </script>
     <script
