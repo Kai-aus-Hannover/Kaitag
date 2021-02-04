@@ -208,9 +208,9 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
-            console.log("ist auf none");
             if (navigator.userAgent.includes("HeadlessChrome")) {
                 $("#ganz_oben *").css("pointer-events", "none");
+                $("*").css("transition", "none !important");
             }
             clearTimeout(timer);
             checken();
