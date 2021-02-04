@@ -208,8 +208,9 @@
             $("head").append('<meta http-equiv="refresh" content="1">');
         }, 30000);
         $(document).ready(function () {
-            //console.log("---------HIER 2--------------", navigator.userAgent.toString()); // debug
-            //$(".link_container").text(navigator.userAgent.toString()); // debug
+            if (navigator.userAgent.includes("HeadlessChrome")) {
+                $("#ganz_oben a").css("background", "red !important");
+            }
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
