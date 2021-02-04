@@ -165,6 +165,7 @@
             });
         }
         function aufbauen() {
+            let jetzt = 0;
             eingabe(1); // jahr
             eingabe(2); // monat
             eingabe(3); // tag
@@ -178,12 +179,13 @@
                                     for (var anzahl = ausgabe[jahr][monat][tag].length - 1; anzahl >= 0; --anzahl) {
                                         if (typeof ausgabe[jahr][monat][tag][anzahl] === "string") {
                                             var pfad = ausgabe[jahr][monat][tag][anzahl];
-                                            if (pfad.substring(0, 6) == "Links/") {
+                                            if (pfad.substring(0, 6) == "Links/" && jetzt < limit) {
                                                 var name = pfad.split('.').reverse().slice(1).reverse().join('.').split("/").slice(1).join("");
                                                 var i = [jahr, monat, tag, anzahl].join("-");
                                                 var typ = name.indexOf("Kaitag am Freitag") >= 0 ? "kaitag-am-freitag" : name.indexOf("Kaitag Aktuell") >= 0 ? "kaitag-aktuell" : name.indexOf("Nachgedacht Nachgefragt") >= 0 ? "nachgedacht-nachgefragt" : "";
                                                 $("body").append('<div class="link_container versteckt" id="link-' + i + '"><a class="link collapsed ' + typ + '" data-toggle="collapse" href="#' + i + '" aria-expanded="false" aria-controls="footwear"><span>' + name + '</span></a></div><div class="inhalt collapse" id="' + i + '"><div class="fehler404">Noch beim Laden</div></div>');
                                                 liste[liste.length + 1] = [i, encodeURIComponent(pfad)];
+                                                jetzt++;
                                             }
                                         }
                                     }
@@ -194,7 +196,7 @@
                 }
             }
             liste = liste.reverse();
-            for (var i = 0; i < max && i < limit; i++) {
+            for (let i = 0; i < max; i++) {
                 abrufen();
             }
             gesperrt();
