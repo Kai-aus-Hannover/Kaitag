@@ -378,6 +378,9 @@ h1 {
     opacity:1;
   }
 }
+.notransition {
+  transition:none !important;
+}
 @media (max-width:900px) {
   .link {
     min-width:100%;
