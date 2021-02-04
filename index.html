@@ -210,8 +210,8 @@
         $(document).ready(function () {
             if (navigator.userAgent.includes("HeadlessChrome")) {
                 $("#ganz_oben *").css("pointer-events", "none");
-                $("*").css("transition", "none !important");
             }
+            $("*").css("transition", "0s !important");
             clearTimeout(timer);
             checken();
             $("#kein_js1").remove();
