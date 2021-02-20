@@ -246,7 +246,7 @@ h1 {
 #link-kaitag-verteiler a {
   padding-left:10px !important;
   padding-right:10px;
-  width:calc(100vw / 9);
+  width:calc(100vw / 8);
 }
 #link-kaitag-verteiler a span {
   margin:0 auto;
