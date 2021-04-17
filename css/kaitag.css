@@ -221,7 +221,7 @@ h1 {
   width:160px;
   background:#eee;
   background-image: url(../logo/odysee.png);
-  background-size:90% !important;
+  background-size:contain !important;
   color:transparent;
 }
 .odysee:hover {
