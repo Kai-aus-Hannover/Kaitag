@@ -217,6 +217,17 @@ h1 {
   background-color:#eee !important;
   color:transparent !important;
 }
+.odysee {
+  width:160px;
+  background:#ccc;
+  background-image: url(../logo/odysee.png);
+  background-size:90% !important;
+  color:transparent;
+}
+.odysee:hover {
+  background-color:#eee !important;
+  color:transparent !important;
+}
 .frei3 {
   width:160px;
   background:#377bbb;
