@@ -135,6 +135,7 @@
             $("#" + i).load(pfad, function (inhalt, ergebnis) {
                 if (ergebnis == "success") {
                     var platformen = {};
+                    platformen["odysee"]       = "odysee";
                     platformen["frei3"]        = "frei3";
                     platformen["donnersender"] = "Donnersender";
                     platformen["bittube"]      = "BitTube";
