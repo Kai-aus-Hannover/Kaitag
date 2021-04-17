@@ -219,13 +219,13 @@ h1 {
 }
 .odysee {
   width:160px;
-  background:#ccc;
+  background:#eee;
   background-image: url(../logo/odysee.png);
   background-size:90% !important;
   color:transparent;
 }
 .odysee:hover {
-  background-color:#eee !important;
+  background-color:#ccc !important;
   color:transparent !important;
 }
 .frei3 {
