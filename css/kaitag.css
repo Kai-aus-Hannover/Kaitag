@@ -379,6 +379,26 @@ h1 {
 .drittel {
     width:33.3%;
 }
+.youtube-1::after {content: " 1";}
+.youtube-2::after {content: " 2";}
+.youtube-3::after {content: " 3";}
+.youtube-4::after {content: " 4";}
+.youtube-5::after {content: " 5";}
+.youtube-6::after {content: " 6";}
+.youtube-7::after {content: " 7";}
+.youtube-8::after {content: " 8";}
+.youtube-9::after {content: " 9";}
+.youtube-10::after {content: " 10";}
+.youtube-11::after {content: " 11";}
+.youtube-12::after {content: " 12";}
+.youtube-13::after {content: " 13";}
+.youtube-14::after {content: " 14";}
+.youtube-15::after {content: " 15";}
+.youtube-16::after {content: " 16";}
+.youtube-17::after {content: " 17";}
+.youtube-18::after {content: " 18";}
+.youtube-19::after {content: " 19";}
+.youtube-20::after {content: " 20";}
 /*
 #link-kaitag-verteiler a {
   line-height:unset;
