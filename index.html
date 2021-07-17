@@ -147,8 +147,9 @@
                     platformen["dailymotion"]  = "dailymotion";
                     platformen["youtube"]      = "YouTube";
                     Object.keys(platformen).forEach(function (a) {
-                        const hier = $("#" + i + " ." + a);
-                        if (hier.length) {
+                        $("#" + i + " ." + a).each(function() {
+                            const hier = $(this);
+                            
                             var zusatz = ""
                             if (a == "youtube") {
                                 const classes = hier.attr("class").split(" ");
@@ -160,12 +161,11 @@
                                     }
                                 }
                             }
-                            var video_link = '<a class="video_links ' + a + zusatz + '" href="' + hier.attr("href") + '">' + platformen[a] + '</a>';
-                        } else {
-                            var video_link = "";
-                        }
-                        $("#link-" + i).append(video_link);
-                        hier.remove();
+                            const video_link = '<a class="video_links ' + a + zusatz + '" href="' + hier.attr("href") + '">' + platformen[a] + '</a>';
+                            
+                            $("#link-" + i).append(video_link);
+                            hier.remove();
+                        });
                     });
                     $("#link-" + i).append($("#link-" + i + " .direkt" ).detach()); // auf die rechte Seite verschieben
                     $("#link-" + i).append($("#link-" + i + " .podcast").detach()); // auf die rechte Seite verschieben
