@@ -300,6 +300,7 @@ h1 {
 .odysee-gesperrt .odysee,
 .donnersender-gesperrt .donnersender,
 .youtube-gesperrt .youtube,
+.youtube-2,
 .bittube-gesperrt .bittube,
 .bitchute-gesperrt .bitchute,
 .dailymotion-gesperrt .dailymotion,
@@ -311,6 +312,7 @@ h1 {
 }
 .odysee-gesperrt .odysee:before,
 .donnersender-gesperrt .donnersender:before,
+.youtube-2:before,
 .youtube-gesperrt .youtube:before,
 .bittube-gesperrt .bittube:before,
 .bitchute-gesperrt .bitchute:before,
@@ -332,6 +334,7 @@ h1 {
 }
 .odysee-gesperrt .odysee:hover:before,
 .donnersender-gesperrt .donnersender:hover:before,
+.youtube-2:hover:before,
 .youtube-gesperrt .youtube:hover:before,
 .bittube-gesperrt .bittube:hover:before,
 .bitchute-gesperrt .bitchute:hover:before,
